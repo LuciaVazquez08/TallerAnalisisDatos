@@ -1,0 +1,560 @@
+zona_id,punto_referencia,estado,station_id,nombre,lat_estacion,lon_estacion,forecast_hourly_url,lat_centro_zona,lon_centro_zona
+ZONA_01,Houston,TX,KHOU,"Houston, Houston Hobby Airport",29.6375,-95.2825,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KIAH,Houston Intercontinental Airport,29.9844,-95.36074,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KEFD,Houston / Ellington,29.6,-95.16667,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KLVJ,"Houston, Pearland Regional Airport",29.52111,-95.24194,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KT41,La Porte Municipal Airport,29.6693,-95.0642,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KSGR,"Houston, Sugar Land Municipal / Hull Field Airport",29.62222,-95.65667,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KDWH,"Houston, Hooks Memorial Airport",30.0675,-95.55611,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KCXO,"Conroe, Montgomery County Airport",30.35667,-95.41389,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KLBX,"Angleton / Lake Jackson, Brazoria County Airport",29.11536,-95.46323,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KGLS,"Galveston, Scholes Field",29.27028,-94.86417,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KARM,"Wharton, Wharton Regional Airport",29.25417,-96.15417,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,K60R,Navasota Municipal Airport,30.36714,-96.11294,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KBYY,"Bay City, Bay City Municipal Airport",28.97306,-95.86333,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,K11R,"Brenham, Brenham Municipal Airport",30.21889,-96.37417,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KUTS,"Huntsville, Huntsville Municipal Airport",30.74389,-95.58611,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,K66R,Robert R Wells Jr Airport,29.6411,-96.5158,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KBPT,Beaumont/Port Arthur Southeast Texas Regional Airport,29.9521,-94.0261,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KCLL,"College Station, Easterwood Field",30.58222,-96.36167,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KPSX,Palacios Municipal Airport,28.72485,-96.25347,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KRWV,"Caldwell, Caldwell Municipal Airport",30.51528,-96.70389,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,K3T5,"La Grange, Fayette Regional Air Center Airport",29.90806,-96.95,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KGYB,"Giddings, Giddings-Lee County Airport",30.16917,-96.98,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KDKR,"Crockett, Houston County Airport",31.30694,-95.40361,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KLHB,"Hearne, Hearne Municipal Airport",30.87167,-96.62222,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KLFK,"Lufkin, Angelina County Airport",31.23389,-94.75,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KJAS,"Jasper, Jasper County-Bell Field Airport",30.88556,-94.03472,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KPKV,Port Lavaca - Calhoun County Airport,28.65159,-96.68196,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KVCT,"Victoria, Victoria Regional Airport",28.8625,-96.92972,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KLCH,Lake Charles Regional Airport,30.12556,-93.22767,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_01,Houston,TX,KOCH,"Nacogdoches, A L Mangham Jr. Regional Airport",31.58333,-94.71667,"https://api.weather.gov/gridpoints/HGX/63,95/forecast/hourly",29.76,-95.36
+ZONA_02,Dallas,TX,KDAL,Dallas Love Field,32.85416,-96.85506,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KRBD,"Dallas, Redbird Airport",32.67583,-96.86389,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KADS,Dallas / Addison Airport,32.96667,-96.83333,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KLNC,Lancaster Airport,32.58323,-96.72091,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KDFW,Dallas/Fort Worth International Airport,32.89743,-97.02196,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KGPM,"Grand Prairie, Grand Prairie Municipal Airport",32.69861,-97.04667,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KHQZ,"Mesquite, Mesquite Metro Airport",32.74694,-96.53028,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KGKY,Arlington Municipal Airport,32.65829,-97.09509,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KJWY,"Midlothian/Waxahachie, Mid-Way Regional Airport",32.45583,-96.91222,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KF46,Rockwall Municipal Airport,32.9322,-96.43484,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KTKI,McKinney - McKinney National Airport,33.17778,-96.59028,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KTRL,"Terrell, Terrell Municipal Airport",32.71361,-96.26833,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KFTW,"Fort Worth, Meacham International Airport",32.82528,-97.36417,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KAFW,"Fort Worth, Fort Worth Alliance Airport",32.97333,-97.31806,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KFWS,Fort Worth Spinks Airport,32.56537,-97.30837,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KDTO,Denton Enterprise Airport,33.20505,-97.20061,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KCPT,"Cleburne, Cleburne Municipal Airport",32.35361,-97.43361,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KGVT,Greenville / Majors,33.06667,-96.06667,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KINJ,"Hillsboro, Hillsboro Municipal Airport",32.08333,-97.09722,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KLUD,"Decatur, Decatur Municipal Airport",33.25444,-97.58056,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KCRS,"Corsicana, Campbell Field-Corsicana Municipal Airport",32.03111,-96.39889,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KGDJ,"Granbury, Granbury Municipal Airport",32.44417,-97.81667,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KGLE,"Gainesville, Gainesville Municipal Airport",33.65139,-97.19694,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KGYI,"Sherman/Denison, Grayson County Airport",33.71667,-96.66667,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KXBP,"Bridgeport, Bridgeport Municipal Airport",33.17528,-97.82833,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KF00,Jones Field - Bonham,33.6131,-96.1793,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KF44,Athens Municipal Airport,32.1638,-95.8284,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KMWL,"Mineral Wells, Mineral Wells Airport",32.78167,-98.06028,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KSLR,"Sulphur Springs, Sulphur Springs Municipal Airport",33.16111,-95.62111,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_02,Dallas,TX,KJDD,"Mineola/Quitman, Wood County Airport",32.74194,-95.49639,"https://api.weather.gov/gridpoints/FWD/89,104/forecast/hourly",32.77,-96.79
+ZONA_03,Chicago,IL,KMDW,"Chicago, Chicago Midway Airport",41.78417,-87.75528,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KORD,"Chicago, Chicago-O'Hare International Airport",41.97972,-87.90444,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KGYY,Gary Regional Airport,41.61212,-87.40908,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KPWK,"Chicago / Wheeling, Pal-Waukee Airport",42.12083,-87.90472,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KIGQ,Lansing Municipal Airport,41.54125,-87.52822,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KLOT,Lewis University Airport,41.60307,-88.10164,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KDPA,"Chicago / West Chicago, Dupage Airport",41.89639,-88.25111,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KJOT,Joliet Regional Airport,41.51755,-88.17903,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KUGN,Chicago/Waukegan Regional Airport,42.42546,-87.86339,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KVPZ,Valparaiso Porter County Municipal Airport,41.45349,-86.99805,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KARR,Aurora Municipal Airport,41.77132,-88.48147,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KC09,Morris Muni-James R Washburn Field Airport,41.43164,-88.41519,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KENW,"Kenosha, Kenosha Regional Airport",42.595,-87.93806,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KDKB,De Kalb Taylor Municipal Airport,41.93381,-88.70657,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KIKK,Greater Kankakee Airport,41.06871,-87.85372,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KRAC,"Racine, Batten International Airport",42.75861,-87.81778,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KBEH,Southwest Michigan Regional Airport,42.12896,-86.41515,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KSBN,South Bend International Airport,41.70889,-86.31861,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KRPJ,"Rochelle, Rochelle Municipal-Koritz Field Airport",41.89057,-89.08175,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KMKE,"Milwaukee, General Mitchell International Airport",42.955,-87.90444,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KLWA,"South Haven, South Haven Area Regional Airport",42.35083,-86.25611,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KRFD,"Rockford, Greater Rockford Airport",42.19278,-89.09333,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KPNT,Pontiac Municipal Airport,40.92327,-88.6213,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KVYS,Illinois Valley Regional Airport,41.35175,-89.14963,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KJVL,Janesville-Rock County,42.62135,-89.04186,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KFEP,Albertus Airport,42.24751,-89.58104,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KSQI,Sterling Rockfalls,41.7432,-89.66547,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KLAF,"Lafayette, Purdue University Airport",40.4125,-86.9475,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KC75,Marshall County Airport,41.02307,-89.38854,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_03,Chicago,IL,KTIP,Rantoul National Aviation Center Airport,40.28952,-88.1473,"https://api.weather.gov/gridpoints/LOT/76,73/forecast/hourly",41.87,-87.62
+ZONA_04,Minneapolis,MN,KMSP,"Minneapolis, Minneapolis-St. Paul International Airport",44.88306,-93.22889,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KMIC,"Minneapolis, Crystal Airport",45.0625,-93.35083,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KSTP,Downtown Holman Field,44.93237,-93.05588,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KANE,Minneapolis / Blaine,45.14258,-93.21272,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KSGS,South St. Paul Municipal-Richard E. Flemi,44.86006,-93.03203,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KFCM,Minneapolis - Flying Cloud Airport,44.83217,-93.47051,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,K21D,Lake Elmo Airport,45.0002,-92.8549,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KLVN,"Minneapolis, Airlake Airport",44.62778,-93.22806,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KCFE,"Buffalo, Buffalo Municipal Airport",45.15889,-93.84306,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KOEO,L O Simenstad Municipal Airport,45.31084,-92.6948,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KSYN,Stanton Airfield,44.47362,-93.01448,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KRNH,New Richmond Municipal Airport,45.14762,-92.53349,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KMGG,"Maple Lake, Maple Lake Municipal Airport",45.23535,-93.98959,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KCBG,Cambridge Municipal Airport,45.56275,-93.26436,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KGYL,Glencoe Municipal Airport,44.7588,-94.0905,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KPNM,Princeton,45.56425,-93.60801,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KFBL,"Faribault, Faribault Municipal Airport",44.32983,-93.31186,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KRGK,Red Wing - Red Wing Regional Airport,44.5926,-92.48439,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KROS,Rush City Regional Airport,45.69628,-92.95424,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KSTC,St. Cloud Regional Airport,45.54415,-94.05165,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KHCD,"Hutchinson, Hutchinson Municipal Airport-Butler Field",44.85961,-94.38551,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KOWA,Owatonna Degner Regional Airport,44.11907,-93.25687,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KMKT,"Mankato, Mankato Regional Airport",44.21667,-93.91667,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KLJF,Litchfield Municipal Airport,45.09485,-94.50837,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KJMR,Mora Municipal Airport,45.88863,-93.26901,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KACQ,Waseca Municipal Airport,44.07024,-93.55342,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KTOB,Dodge Center Airport,44.02026,-92.8295,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KUBE,Cumberland,45.506,-91.9811,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,KRZN,"Siren, Burnett County Airport",45.82278,-92.3725,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_04,Minneapolis,MN,K04W,Hinckley Field of Dreams Airport,46.02437,-92.89905,"https://api.weather.gov/gridpoints/MPX/109,72/forecast/hourly",44.97,-93.26
+ZONA_05,St. Louis,MO,KCPS,St. Louis Downtown Airport,38.56403,-90.14871,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KSTL,St. Louis Lambert International Airport,38.7525,-90.37361,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KALN,St. Louis Regional Airport,38.88968,-90.03163,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KSUS,"St. Louis, Spirit Of St. Louis Airport",38.65722,-90.65583,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KSET,"St. Charles, St. Charles County Smartt Airport",38.93056,-90.4325,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KSAR,Sparta Community-Hunter Field Airport,38.14624,-89.70243,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KFYG,Washington Regional Airport,38.5876,-90.9938,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KPCD,Perryville Regional Airport,37.86867,-89.86214,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KUUV,SULLIVAN,38.2335,-91.16433,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KFAM,Farmington Airport,37.76667,-90.43333,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KENL,Centralia Municipal Airport,38.50951,-89.08996,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KSLO,"Salem, Salem-Leckrone Airport",38.64278,-88.96417,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KMVN,Mount Vernon Airport,38.32842,-88.85292,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KPPQ,"Pittsfield, Pittsfield Penstone Municipal Airport",39.63889,-90.77833,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KMDH,Southern Illinois Airport,37.78328,-89.24532,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KTAZ,"Taylorville, Taylorville Municipal Airport",39.53417,-89.32778,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KIJX,Jacksonville Municipal Airport,39.77401,-90.24187,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KMWA,Marion - Williamson County Regional Airport,37.76671,-89.00993,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KSPI,Springfield - Abraham Lincoln Capital Airport,39.84527,-89.68405,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KVIH,"Rolla / Vichy, Rolla National Airport",38.13194,-91.76528,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KFOA,Flora Municipal Airport,38.66726,-88.4527,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,K1H2,"Effingham, Effingham County Memorial Airport",39.07056,-88.53333,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KFWC,"Fairfield, Fairfield Municipal Airport",38.37861,-88.41278,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KHAE,Hannibal Regional Airport,39.7252,-91.4439,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KCGI,"Cape Girardeau, Cape Girardeau Regional Airport",37.22556,-89.57833,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KJEF,"Jefferson City, Jefferson City Memorial Airport",38.59444,-92.15583,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KUIN,Quincy Regional Airport-Baldwin Field,39.9371,-91.19659,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KHSB,Harrisburg-Raleigh Airport,37.81281,-88.54486,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KOLY,Olney-Noble Airport,38.72133,-88.1799,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_05,St. Louis,MO,KCOU,"Columbia, Columbia Regional Airport",38.81694,-92.21833,"https://api.weather.gov/gridpoints/LSX/95,74/forecast/hourly",38.62,-90.19
+ZONA_06,Oklahoma City,OK,KOKC,"Oklahoma City, Will Rogers World Airport",35.38861,-97.60028,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KTIK,Tinker Air Force Base,35.41667,-97.38333,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KPWA,"Oklahoma City, Wiley Post Airport",35.54111,-97.64667,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KOUN,Norman / Max Westheimer,35.2435,-97.4708,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KGOK,"Guthrie, Guthrie Municipal Airport",35.85194,-97.4075,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KSNL,"Shawnee, Shawnee Municipal Airport",35.35722,-96.94278,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KCHK,"Chickasha, Chickasha Municipal Airport",35.09611,-97.96611,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KCQB,"Chandler, Chandler Municipal Airport",35.72389,-96.82028,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KPVJ,"Pauls Valley, Pauls Valley Municipal Airport",34.71111,-97.22333,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KCUH,"Cushing, Cushing Municipal Airport",35.94972,-96.77278,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KSWO,"Stillwater, Stillwater Regional Airport",36.16222,-97.08917,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KJWG,"Watonga, Watonga Airport",35.86472,-98.42083,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KOJA,"Weatherford, Thomas P Stafford Airport",35.54472,-98.66833,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KADH,"Ada, Ada Municipal Airport",34.80444,-96.67139,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KWDG,"Enid, Enid Woodring Regional Airport",36.37917,-97.79111,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KDUC,"Duncan, Halliburton Field Airport",34.47083,-97.96,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KLAW,"Lawton, Lawton Municipal Airport",34.5575,-98.41667,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KADM,"Ardmore, Ardmore Municipal Airport",34.30306,-97.01944,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KOKM,"Okmulgee, Okmulgee Municipal Airport",35.66806,-95.94861,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KPNC,"Ponca City, Ponca City Municipal Airport",36.73056,-97.09972,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KHBR,"Hobart, Hobart Municipal Airport",34.98944,-99.0525,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,K1F0,"Ardmore, Ardmore Downtown Executive Airport",34.14694,-97.1225,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KRVS,Tulsa - Jones Jr. Airport,36.04255,-95.99005,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KCSM,"Clinton, Clinton-Sherman Airport",35.35667,-99.20361,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KTUL,"Tulsa, Tulsa International Airport",36.1975,-95.88639,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KMLC,"McAlester, McAlester Regional Airport",34.88222,-95.78306,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KAVK,"Alva, Alva Regional Airport",36.77306,-98.67,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KFDR,"Frederick, Frederick Municipal Airport",34.34444,-98.98306,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KAXS,"Altus, Altus/Quartz Mountain Regional Airport",34.69861,-99.33806,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_06,Oklahoma City,OK,KSPS,"Wichita Falls, Sheppard Air Force Base",33.97861,-98.49278,"https://api.weather.gov/gridpoints/OUN/97,93/forecast/hourly",35.46,-97.51
+ZONA_07,New Orleans,LA,KNEW,"New Orleans, New Orleans Lakefront Airport",30.04944,-90.02889,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KNBG,New Orleans Naval Air Station - Alvin Callender Field,29.83736,-90.02445,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KMSY,"New Orleans, New Orleans International Airport",29.99278,-90.25083,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KASD,"Slidell, Slidell Airport",30.34306,-89.82194,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KGAO,"Galliano, South Lafourche Airport",29.44472,-90.26111,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KHUM,Houma-Terrebonne Airport,29.56341,-90.66283,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KHDC,"Hammond, Hammond Municipal Airport",30.52083,-90.4175,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KREG,Louisiana Regional Airport,30.1714,-90.9404,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KBXA,"Bogalusa, George R Carr Memorial Air Field",30.81361,-89.86472,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KGPT,Gulfport - Gulfport-Biloxi International Airport,30.41194,-89.08083,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KBIX,Keesler Air Force Base / Biloxi,30.41667,-88.91667,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KBTR,"Baton Rouge, Baton Rouge Metropolitan, Ryan Field",30.53722,-91.14694,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KPTN,Patterson Memorial,29.71667,-91.33333,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KMCB,"McComb, McComb / Pike County / John E Lewis Field Airport",31.17833,-90.47194,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KPQL,Moss Point - Trent Lott International Airport,30.46305,-88.53155,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KHZR,New Roads False River Regional Airport,30.7183,-91.4787,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KHBG,"Hattiesburg, Bobby L Chain Municipal Airport",31.26945,-89.25613,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KARA,Acadiana Regional Airport,30.02918,-91.88451,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KPIB,"Hattiesburg/Laurel, Hattiesburg-Laurel Regional Airport",31.46667,-89.33333,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KLFT,"Lafayette, Lafayette Regional Airport",30.20222,-91.99306,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KMOB,"Mobile, Mobile Regional Airport",30.68833,-88.24556,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KBFM,"Mobile, Mobile Downtown Airport",30.61389,-88.06333,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KHEZ,"Natchez, Hardy-Anders Field Natchez-Adams County Airport",31.61593,-91.29724,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_07,New Orleans,LA,KACP,"Oakdale, Allen Parish Airport",30.75056,-92.68861,"https://api.weather.gov/gridpoints/LIX/68,88/forecast/hourly",29.95,-90.07
+ZONA_08,Detroit,MI,KDET,Coleman A Young Municipal Airport,42.40729,-83.00894,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KDTW,"Detroit, Detroit Metropolitan Wayne County Airport",42.23139,-83.33083,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KONZ,"Detroit/Grosse Ile, Grosse Ile Airport",42.09861,-83.16111,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KMTC,Selfridge Air National Guard Base,42.60458,-82.83528,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KYIP,"Detroit, Willow Run Airport",42.23667,-83.52611,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KPTK,"Pontiac, Oakland County International Airport",42.66306,-83.41,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KTTF,"Monroe, Custer Airport",41.94,-83.43472,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KARB,"Ann Arbor, Ann Arbor Municipal Airport",42.22389,-83.74,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KPHN,St Clair County International Airport,42.91031,-82.53315,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KDUH,"Lambertville, Toledo Suburban Airport",41.73583,-83.65528,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KD95,Lapeer Dupont-lapeer,43.0665,-83.2715,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KOZW,"Howell, Livingston County Airport",42.62944,-83.98417,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KFNT,"Flint, Bishop International Airport",42.96667,-83.74944,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KTDZ,Toledo - Toledo Executive Airport,41.56306,-83.47639,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KADG,"Adrian, Lenawee County Airport",41.86778,-84.07944,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KTOL,Toledo - Toledo Express Airport,41.58704,-83.80539,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KRNP,"Owosso, Owosso Community Airport",42.99278,-84.13889,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KTEW,"Mason, Mason Jewett Field Airport",42.56583,-84.42333,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KJXN,Jackson County Airport - Reynolds Field,42.26171,-84.46147,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KCFS,"Caro, Tuscola Area Airport",43.45861,-83.44528,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KJYM,Hillsdale Municipal Airport,41.91972,-84.58528,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KLAN,Capital Region International Airport,42.77616,-84.5997,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KHYX,Saginaw County H W Browne Airport,43.43191,-83.86476,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KCLE,Cleveland Hopkins International Airport,41.40569,-81.85193,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KBKL,"Cleveland, Burke Lakefront Airport",41.52556,-81.66889,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KFPK,"Charlotte, Fitch H Beach Airport",42.57444,-84.81139,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KCGF,Cleveland / Cuyahoga,41.56667,-81.48333,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KRMY,Brooks Field Airport,42.25238,-84.95253,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KMBS,MBS International Airport,43.5281,-84.08129,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_08,Detroit,MI,KBAX,Huron County Memorial Airport,43.77741,-82.98271,"https://api.weather.gov/gridpoints/DTX/66,34/forecast/hourly",42.33,-83.04
+ZONA_09,Indianapolis,IN,KIND,Indianapolis International Airport,39.72518,-86.2816,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KEYE,"Indianapolis, Eagle Creek Airpark",39.825,-86.29583,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KMQJ,Indianapolis Regional Airport,39.84314,-85.89774,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KTYQ,INDIANAPOLIS,40.03066,-86.2515,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KGEZ,Shelbyville Municipal Airport,39.58546,-85.79982,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KGPC,Putnam County Regional Airport,39.6354,-86.8155,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KBAK,Columbus / Bakalar,39.26667,-85.9,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KFKR,Frankfort Municipal Airport,40.2734,-86.5622,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KCFJ,Crawfordsville Municipal Airport,39.9756,-86.9199,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KBMG,"Bloomington, Monroe County Airport",39.14306,-86.61667,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KMIE,"Muncie, Delaware County-Johnson Field",40.23417,-85.39361,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KOKK,"Kokomo, Kokomo Municipal Airport",40.53333,-86.06667,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KMZZ,Marion Municipal Airport,40.49,-85.68,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KGUS,Grissom Air Force Base / Peru,40.65,-86.15,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KHUF,Terre Haute Regional Airport,39.4429,-87.32207,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KGGP,Logansport/Cass County Airport,40.711,-86.373,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KRID,Richmond Municipal Airport,39.7572,-84.8428,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KMCX,Monticello White County Airport,40.7088,-86.7668,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KPRG,Edgar County Airport,39.69817,-87.6669,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KI67,Cincinnati W Airport,39.2589,-84.7743,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KDNV,"Danville, Vermilion County Airport",40.19944,-87.59556,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KRCR,Rochester Fulton County Airport,41.06553,-86.18169,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KDCY,Daviess County Airport,38.7004,-87.1297,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KVES,Versailles Darke County Airport,40.2044,-84.5319,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KCVG,Cincinnati/Northern Kentucky International Airport,39.04456,-84.67229,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KRSV,Robinson Municipal Airport,39.01361,-87.64846,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KFWA,Fort Wayne International Airport,40.97251,-85.20637,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KRZL,Rensselaer Jasper County Airport,40.94789,-87.18258,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KDAY,"Dayton, Cox Dayton International Airport",39.90611,-84.21861,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_09,Indianapolis,IN,KLUK,"Cincinnati, Cincinnati Municipal Airport Lunken Field",39.10583,-84.41583,"https://api.weather.gov/gridpoints/IND/58,69/forecast/hourly",39.76,-86.15
+ZONA_10,Omaha,NE,KOMA,Omaha - Eppley Airfield,41.3119,-95.90185,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KCBF,Council Bluffs,41.26125,-95.7604,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KOFF,Omaha / Offutt Air Force Base,41.11667,-95.9,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KMLE,"Omaha, Millard Airport",41.19583,-96.11222,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KBTA,Blair Municipal Airport,41.4148,-96.109,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KPMV,"Plattsmouth, Plattsmouth Municipal Airport",40.95,-95.91778,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KFET,Fremont Municipal Airport,41.45,-96.51667,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KAHQ,Wahoo,41.2406,-96.5946,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KTQE,"Tekamah, Tekamah Municipal Airport",41.76694,-96.17778,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KHNR,"Harlan, Harlan Municipal Airport",41.58444,-95.33972,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KRDK,Red Oak,41.01667,-95.26667,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KSDA,Shenandoah Municipal,40.75,-95.41667,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KAFK,"Nebraska City, Nebraska City Municipal Airport",40.6,-95.85,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KAIO,Atlantic,41.4,-95.05,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KLNK,"Lincoln, Lincoln Municipal Airport",40.83111,-96.76444,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KDNS,Denison,41.98333,-95.38333,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KICL,Schenck Field Airport,40.72421,-95.02224,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KADU,"Audubon, Audubon County Airport",41.70111,-94.92028,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KOLU,"Columbus, Columbus Municipal Airport",41.45,-97.33333,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KBIE,Beatrice Municipal,40.3,-96.75,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KCIN,Carroll,42.05,-94.78333,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KSUX,"Sioux City, Sioux Gateway Airport",42.4025,-96.38444,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KCSQ,Creston Municipal Airport,41.01886,-94.361,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KFNB,"Falls City, Brenner Field Airport",40.07889,-95.59194,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KLCG,"Wayne, Wayne Municipal Airport",42.24167,-96.98139,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KJYR,"York, York Municipal Airport",40.89667,-97.62278,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KOFK,"Norfolk, Stefan Memorial Airport",41.98056,-97.43694,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KSLB,Storm Lake,42.6,-95.23333,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KMYZ,Marysville Municipal Airport,39.8553,-96.6306,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_10,Omaha,NE,KLRJ,Le Mars Municipal Airport,42.77478,-96.19239,"https://api.weather.gov/gridpoints/OAX/83,60/forecast/hourly",41.25,-95.93
+ZONA_11,Fargo,ND,KFAR,"Fargo, Hector International Airport",46.92528,-96.81111,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KJKJ,Moorhead Municipal Airport,46.8404,-96.65442,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KDTL,Detroit Lakes Airport-Wething Field,46.82854,-95.88567,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KBWP,"Wahpeton, Harry Stern Airport",46.24389,-96.60722,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KFFM,Fergus Falls Municipal Airport-Einar Mickel,46.28655,-96.15338,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KCKN,Crookston Municipal Field,47.84042,-96.6201,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KFSE,"Fosston, Fosston Municipal Airport",47.59278,-95.77333,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KY63,Elbow Lake Municipal Airport,45.98837,-95.99353,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KETH,Wheaton Municipal Airport,45.78284,-96.54607,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KGFK,"Grand Forks, Grand Forks International Airport",47.94806,-97.1825,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KADC,Wadena Municipal Airport,46.45022,-95.21353,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KPKD,Park Rapids Municipal Airport,46.89968,-95.06681,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,K8D3,"Sisseton, Sisseton Municipal Airport",45.66889,-96.99139,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KTVF,"Thief River Falls, Thief River Falls Regional Airport",48.06667,-96.18333,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KJMS,"Jamestown, Jamestown Municipal Airport",46.92972,-98.67833,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KAXN,"Alexandria, Chandler Field",45.86861,-95.39417,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KMOX,"Morris, Morris Municipal Airport",45.56667,-95.96667,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KBJI,Bemidji,47.50762,-94.92783,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KSAZ,"Staples, Staples Municipal Airport",46.38083,-94.80667,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KGHW,Glenwood Municipal Airport,45.64564,-95.31876,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KPWC,Pine River Regional Airport,46.72654,-94.38485,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KXVG,"Longville, Longville Municipal Airport",46.99028,-94.20389,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KABR,"Aberdeen, Aberdeen Regional Airport",45.44333,-98.41306,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KBRD,Brainerd - Crow Wing County Airport,46.40205,-94.12734,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KHCO,Hallock Municipal Airport,48.75245,-96.93759,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KDVL,"Devils Lake, Devils Lake Municipal Airport",48.11667,-98.91667,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KLXL,"Little Falls, Little Falls/Morrison County Airport-Lindbergh Field",45.95,-94.35,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,K2C8,CAVALIER,48.78377,-97.62964,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KVWU,Waskish Municipal Airport,48.15014,-94.512,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_11,Fargo,ND,KROX,"Roseau, Roseau Municipal Airport/Rudy Billberg Field",48.85,-95.7,"https://api.weather.gov/gridpoints/FGF/100,56/forecast/hourly",46.87,-96.78
+ZONA_12,Little Rock,AR,KLIT,"Little Rock, Adams Field",34.72667,-92.23611,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KSUZ,Saline County Regional Airport,34.59039,-92.47944,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KSGT,"Stuttgart, Stuttgart Municipal Airport",34.6,-91.56667,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KPBF,"Pine Bluff, Grider Field Airport",34.175,-91.93472,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KSRC,Searcy Municipal Airport,35.21349,-91.73928,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KHOT,"Hot Springs, Memorial Field Airport",34.47806,-93.09611,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KRUE,Russellville Regional Airport,35.25737,-93.09494,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KCCA,Clinton Memorial Airfield,35.598,-92.4516,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KADF,Dexter B Florence Memorial Field,34.0998,-93.0661,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KMWT,Mount Ida,34.55,-93.58333,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KBVX,"Batesville, Batesville Regional Airport",35.73333,-91.65,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KLLQ,"Monticello, Monticello Municipal Airport/Ellis Field",33.63833,-91.75111,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KCDH,Camden / Harrell Field,33.61667,-92.76667,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KM19,"Newport, Newport Municipal Airport",35.6375,-91.17611,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KELD,South Arkansas Regional Airport,33.22075,-92.814,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KMEZ,"Mena, Mena Intermountain Municipal Airport",34.54528,-94.2025,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KFLP,"Flippin, Marion County Regional Airport",36.3,-92.58333,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KUTA,"Tunica, Tunica Municipal Airport",34.68083,-90.34639,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KBPK,Baxter County Airport,36.37056,-92.47194,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KGLH,"Greenville, Mid Delta Regional Airport",33.48278,-90.98556,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KHRO,"Harrison, Boone County Airport",36.26167,-93.15472,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KAGO,Ralph C Weiser Field Airport,33.22747,-93.217,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KAWM,"West Memphis, West Memphis Municipal Airport",35.13333,-90.23333,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KJBR,"Jonesboro, Jonesboro Municipal Airport",35.83722,-90.64306,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KARG,Walnut Ridge Regional Airport,36.12562,-90.92148,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KFSM,Fort Smith Regional Airport,35.3335,-94.36524,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KDEQ,"De Queen, J Lynn Helms Sevier County Airport",34.04694,-94.39944,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KTXK,"Texarkana, Texarkana Regional-Webb Field",33.45611,-93.9875,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KMEM,Memphis International Airport,35.05644,-89.98634,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_12,Little Rock,AR,KFYV,"Fayetteville, Drake Field",36.01028,-94.16778,"https://api.weather.gov/gridpoints/LZK/82,72/forecast/hourly",34.74,-92.28
+ZONA_13,Des Moines,IA,KDSM,Des Moines International Airport,41.53399,-93.65307,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KIKV,Ankeny Regional Airport,41.68782,-93.56944,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KAMW,"Ames, Ames Municipal Airport",41.99056,-93.61889,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KTNU,Newton Municipal Airport - Earl Johnson Field,41.67014,-93.01902,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KOXV,Knoxville,41.3,-93.11667,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KPRO,Perry Municipal Airport,41.828,-94.1599,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KBNW,Boone Municipal,42.05,-93.85,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KPEA,"Pella, Pella Municipal Airport",41.4,-92.93333,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KI75,Osceola Municipal Airport,41.05222,-93.68966,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KCNC,Chariton,41.03333,-93.36667,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KGGI,Grinnell Municipal Airfield,41.7092,-92.7349,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KMIW,"Marshalltown, Marshalltown Municipal Airport",42.11056,-92.91611,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KEBS,Webster City Municipal Airport,42.43724,-93.87237,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KOOA,"Oskaloosa, Oskaloosa Municipal Airport",41.22611,-92.49361,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KIFA,Iowa Falls Municipal Airport,42.471,-93.27,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KLWD,"Lamoni, Lamoni Municipal Airport",40.63056,-93.90083,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KOTM,Ottumwa Regional Airport,41.10082,-92.44451,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KTVK,Centerville Municipal Airport,40.6839,-92.901,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KFOD,Fort Dodge,42.55,-94.18333,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KCAV,Clarion,42.75,-93.76667,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KALO,"Waterloo, Waterloo Municipal Airport",42.55444,-92.40111,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KFFL,Fairfield Municipal Airport,41.0521,-91.98339,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KVTI,"Vinton, Vinton Veterans Memorial Airpark Airport",42.21861,-92.02583,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KCID,Cedar Rapids Airport,41.88295,-91.72456,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KAWG,Washington,41.28333,-91.66667,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KIIB,"Independence, Independence Municipal Airport",42.45,-91.93333,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KIOW,Iowa City Municipal Airport,41.63945,-91.5445,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KAXA,Algona,43.08333,-94.26667,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KMCW,Mason City Municipal Airport,43.15442,-93.32607,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_13,Des Moines,IA,KOLZ,Oelwein Municipal Airport,42.68316,-91.97595,"https://api.weather.gov/gridpoints/DMX/74,49/forecast/hourly",41.58,-93.6
+ZONA_14,Bismarck,ND,KBIS,"Bismarck, Bismarck Municipal Airport",46.7825,-100.75722,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KY19,MANDAN,46.77,-100.9,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KHZE,HAZEN,47.28,-101.58,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KN60,Garrison,47.64583,-101.43944,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,K5H4,Harvey Municipal Airport,47.7912,-99.9317,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,K46D,CARRINGTON,47.45,-99.15,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KDIK,"Dickinson, Dickinson Municipal Airport",46.79722,-102.80194,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,K9Y1,Dunn County Airport - Weydahl Field,47.39133,-102.77181,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KMOT,Minot International Airport,48.25203,-101.2689,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KHEI,"Hettinger, Hettinger Municipal Airport",46.01056,-102.64972,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KMIB,Minot Air Force Base,48.41667,-101.35,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KBWW,Bowman Regional Airport,46.16551,-103.30074,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,K08D,Stanley Municipal Airport,48.3008,-102.4064,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KBAC,Valley City,46.9412,-98.018,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KS32,Cooperstown,47.4228,-98.1059,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KS25,WATFORD CITY,47.8,-103.25,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,K2D5,Oakes Municipal Airport,46.1731,-98.0799,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,K9D7,CANDO,48.48,-99.23,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KD09,Bottineau Municipal Airport,48.83047,-100.41731,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,K20U,BEACH,46.93,-103.98,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,K06D,ROLLA,48.88,-99.62,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KGWR,Gwinner,46.2187,-97.6435,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KBHK,"Baker, Baker Municipal Airport",46.34778,-104.2575,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KXWA,Williston Basin International Airport,48.26086,-103.75114,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KSDY,Sidney-Richland,47.7,-104.2,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_14,Bismarck,ND,KD50,CROSBY,48.93,-103.3,"https://api.weather.gov/gridpoints/BIS/110,47/forecast/hourly",46.8,-100.78
+ZONA_15,Dodge City,KS,KDDC,"Dodge City, Dodge City Regional Airport",37.77278,-99.96972,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KGCK,Garden City Regional Airport,37.9275,-100.72444,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KPTT,Pratt Municipal,37.7,-98.75,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KLBL,"Liberal, Liberal Municipal Airport",37.05,-100.96667,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KGBD,"Great Bend, Great Bend Municipal Airport",38.35,-98.86667,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KP28,"Medicine Lodge, Medicine Lodge",37.28389,-98.55278,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KHYS,"Hays, Hays Regional Airport",38.85,-99.26667,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KRSL,"Russell, Russell Municipal Airport",38.87278,-98.81306,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KGUY,Guymon / Guymon Municipal Airport,36.68167,-101.50528,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KHLC,"Hill City, Hill City Municipal Airport",39.37472,-99.82972,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KEHA,"Elkhart, Elkhart-Morton County Airport",37.0,-101.88333,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KGLD,"Goodland, Renner Field",39.3675,-101.69306,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_15,Dodge City,KS,KITR,Burlington - Carson County Airport,39.24149,-102.2819,"https://api.weather.gov/gridpoints/DDC/76,38/forecast/hourly",37.75,-100.01
+ZONA_16,El Paso,TX,KELP,"El Paso, El Paso International Airport",31.81111,-106.37583,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KLRU,"Las Cruces, Las Cruces International Airport",32.28944,-106.92194,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KHMN,Holloman Air Force Base,32.85,-106.1,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KALM,Alamogordo-White,32.83512,-105.99408,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KDMN,Deming Municipal Airport,32.25927,-107.72051,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KTCS,"Truth Or Consequences, Truth Or Consequences Municipal Airport",33.23667,-107.26806,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KSVC,Grant County Airport,32.63099,-108.14658,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KSRR,Sierra Blanca Regional Airport,33.46677,-105.52778,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KLSB,Lordsburg Municipal Airport,32.33346,-108.69174,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KATS,Artesia Municipal Airport,32.85239,-104.46444,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KROW,Roswell International Air Center Airport,33.30737,-104.50816,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_16,El Paso,TX,KDUG,Bisbee Douglas International Airport,31.45838,-109.60676,"https://api.weather.gov/gridpoints/EPZ/100,56/forecast/hourly",31.76,-106.48
+ZONA_17,Amarillo,TX,KAMA,"Amarillo, Amarillo International Airport",35.22,-101.71722,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KHRX,Hereford Municipal Airport,34.8578,-102.3264,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KBGD,"Borger, Hutchinson County Airport",35.695,-101.395,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KDUX,"Dumas, Moore County Airport",35.85778,-102.01306,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KPPA,"Pampa, Perry Lefors Field Airport",35.61278,-100.99611,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KDHT,"Dalhart, Dalhart Municipal Airport",36.02333,-102.54722,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KE42,Major Samuel B Cornelius Field Airport,36.221,-101.1945,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KCVN,Clovis Municipal Airport,34.42274,-103.0802,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KHHF,"Canadian, Hemphill County Airport",35.9,-100.4,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KTCC,Tucumcari Municipal Airport,35.18053,-103.60145,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KCDS,"Childress, Childress Municipal Airport",34.4275,-100.28333,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KCAO,Clayton Municipal Airpark,36.44834,-103.15367,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KHQG,Hugoton Municipal Airport,37.16308,-101.37052,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KGAG,"Gage, Gage Airport",36.29667,-99.76889,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KELK,Elk City Regional Business Airport,35.4308,-99.3943,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_17,Amarillo,TX,KWWR,"Woodward, West Woodward Airport",36.43667,-99.52111,"https://api.weather.gov/gridpoints/AMA/48,26/forecast/hourly",35.22,-101.83
+ZONA_18,Pierre,SD,KPIR,"Pierre, Pierre Regional Airport",44.38278,-100.28583,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,K98D,ONIDAMUNC,44.70045,-100.10077,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,K9V9,"Chamberlain, Chamberlain Municipal Airport",43.76667,-99.31833,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KPHP,"Philip, Philip Airport",44.05111,-101.60111,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KICR,"Winner, Bob Wiley Field Airport",43.39056,-99.8425,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KMBG,"Mobridge, Mobridge Municipal Airport",45.55,-100.40861,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KD07,Faith,45.03194,-102.01917,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,K1D8,Redfield Municipal Airport,44.85657,-98.53123,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KHON,"Huron, Huron Regional Airport",44.38806,-98.22833,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KMHE,"Mitchell, Mitchell Municipal Airport",43.76667,-98.03333,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KATY,"Watertown, Watertown Municipal Airport",44.90472,-97.14944,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KBTN,BRITTON,45.81522,-97.74313,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KBKX,"Brookings, Brookings Municipal Airport",44.3,-96.81667,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KYKN,"Yankton, Chan Gurney Municipal Airport",42.91667,-97.38333,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KFSD,"Sioux Falls, Foss Field",43.57694,-96.75361,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,K1D1,MILBANK,45.23053,-96.56596,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KPQN,Pipestone Municipal Airport,43.98542,-96.29764,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KCNB,Canby Airfield,44.7295,-96.266,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KVVV,"Ortonville, Ortonville Muncipal-Martinson Field Airport",45.30556,-96.42444,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KDXX,"Madison, Madison-Lac Qui Parle County Airport",44.98394,-96.17884,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KAQP,Appleton Municipal Airport,45.22488,-96.00412,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KMML,"Marshall, Southwest Minnesota Regional Airport - Marshall/Ryan Field",44.45,-95.81667,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_18,Pierre,SD,KSHL,Sheldon,43.21667,-95.83333,"https://api.weather.gov/gridpoints/ABR/55,43/forecast/hourly",44.36,-100.35
+ZONA_19,Shreveport,LA,KDTN,"Shreveport, Shreveport Downtown Airport",32.5425,-93.74472,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KSHV,"Shreveport, Shreveport Regional Airport",32.44694,-93.82417,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KMNE,Minden Airport,32.64603,-93.29808,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KASL,Marshall,32.5205,-94.3078,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,K4F2,Panola County Airport-Sharpe Field,32.17608,-94.29881,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KATA,Hall-Miller Municipal Airport,33.10253,-94.19503,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KF17,Center Municipal Airport,31.8316,-94.1564,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KGGG,Longview - East Texas Regional Airport,32.39056,-94.71389,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KIER,"Natchitoches, Natchitoches Regional Airport",31.73583,-93.09917,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KRSN,"Ruston, Ruston Regional Airport",32.51444,-92.58833,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KRFI,Rusk County Airport,32.1417,-94.8517,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KJXI,"Gilmer, Fox Stephens Field - Gilmer Municipal Airport",32.69889,-94.94861,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KOSA,"Mount Pleasant, Mount Pleasant Regional Airport",33.09528,-94.96139,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KJSO,"Jacksonville, Cherokee County Airport",31.86917,-95.21722,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KTYR,"Tyler, Tyler Pounds Field",32.35861,-95.40389,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KMLU,Monroe Regional Airport,32.51557,-92.02995,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KAEX,"Alexandria, Alexandria International Airport",31.33472,-92.55861,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KESF,Alexandria Esler Regional Airport,31.39634,-92.28273,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,K4O4,"Idabel, Mc Curtain County Regional Airport",33.90917,-94.85917,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KDRI,"De Ridder, Beauregard Parish Airport",30.83167,-93.33972,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KPRX,Paris / Cox Field,33.63333,-95.45,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KPSN,"Palestine, Palestine Municipal Airport",31.77944,-95.70611,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KTVR,"Vicksburg, Vicksburg / Tallulah Regional Airport",32.34806,-91.03,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_19,Shreveport,LA,KDUA,"Durant, Eaker Field Airport",33.94222,-96.39444,"https://api.weather.gov/gridpoints/SHV/74,68/forecast/hourly",32.52,-93.75
+ZONA_20,Lubbock Airport,TX,KLBB,"Lubbock, Lubbock International Airport",33.6675,-101.82139,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KPVW,"Plainview, Hale County Airport",34.16806,-101.71722,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KSNK,"Snyder, Winston Field Airport",32.69333,-100.95028,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KGNC,"Seminole, Gaines County Airport",32.67528,-102.6525,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KCVS,Cannon Air Force Base / Clovis,34.38333,-103.31667,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KBPG,"Big Spring, Big Spring McMahon-Wrinkle Airport",32.2,-101.51667,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KHOB,Hobbs / Lea County,32.68333,-103.21667,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KSWW,"Sweetwater, Avenger Field Airport",32.46722,-100.46639,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KMDD,"Midland, Midland Airpark",32.03639,-102.10083,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KMAF,"Midland, Midland International Airport",31.94778,-102.20861,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KODO,"Odessa, Odessa-Schlemeyer Field",31.92139,-102.39167,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KF05,"Vernon, Wilbarger County Airport",34.22556,-99.28361,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KABI,"Abilene, Abilene Regional Airport",32.41028,-99.68167,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KCNM,"Carlsbad, Cavern City Air Terminal Airport",32.3375,-104.26333,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KRPH,"Graham, Graham Municipal Airport",33.11,-98.55528,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KPYX,"Perryton, Perryton Ochiltree County Airport",36.4,-100.73333,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KBWD,"Brownwood, Brownwood Regional Airport",31.8,-98.95,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KMKN,"Comanche, Comanche County-City Airport",31.91667,-98.60028,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KSEP,"Stephenville, Clark Field Municipal Airport",32.21667,-98.18333,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KLVS,Las Vegas Municipal Airport,35.65584,-105.13852,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KNFW,"Fort Worth, Naval Air Station",32.76583,-97.43333,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_20,Lubbock Airport,TX,KRTN,Raton Municipal - Crews Field Airport,36.741528,-104.502183,"https://api.weather.gov/gridpoints/LUB/51,37/forecast/hourly",33.66,-101.82
+ZONA_21,Midland Airport,TX,KE11,Andrews County Airport,32.3311,-102.5295,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KE01,Roy Hurd Memorial Airport,31.58247,-102.90903,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KLUV,Lamesa Municipal Airport,32.75631,-101.92022,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KINK,"Wink, Winkler County Airport",31.77972,-103.20139,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KFST,"Fort Stockton, Fort Stockton-Pecos County Airport",30.91194,-102.91667,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KPEQ,"Pecos, Pecos Municipal Airport",31.38222,-103.51056,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KSJT,"San Angelo, Mathis Field",31.35139,-100.49389,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KSOA,"Sonora, Sonora Municipal Airport",30.58556,-100.64833,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,K6R6,Dryden - Terrell County Airport,30.04806,-102.21306,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KE38,"Alpine, Alpine-Casparis Municipal Airport",30.38417,-103.68333,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KMRF,Marfa,30.36667,-104.01667,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KVHN,Culberson County Airport,31.05783,-104.78381,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KJCT,"Junction, Kimble County Airport",30.51083,-99.76639,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KECU,"Rocksprings, Edwards County Airport",29.94667,-100.17361,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KDRT,"Del Rio, Del Rio International Airport",29.37472,-100.92361,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KT89,Lajitas International Airport,29.27713,-103.68579,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KPRS,Presidio Lely International Airport,29.6341,-104.3616,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_21,Midland Airport,TX,KUVA,"Uvalde, Garner Field Airport",29.21111,-99.74333,"https://api.weather.gov/gridpoints/MAF/119,131/forecast/hourly",31.94,-102.2
+ZONA_22,Scottsbluff Regional,NE,KBFF,"Scottsbluff, Heilig Field",41.86694,-103.58583,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KTOR,Torrington Municipal Airport,42.06134,-104.15842,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KAIA,"Alliance, Alliance Municipal Airport",42.05722,-102.8,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KIBM,"Kimball, Kimball Municipal Airport/Robert E Arraj Field",41.18333,-103.66667,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,K82V,Pine Bluffs Municipal Airport,41.1533,-104.1302,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KSNY,"Sidney, Sidney Municipal Airport",41.09944,-102.98556,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KEAN,Phifer Airfield - Wheatland,42.05472,-104.93711,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KCDR,"Chadron, Chadron Municipal Airport",42.8375,-103.09528,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KCYS,"Cheyenne, Cheyenne Airport",41.15789,-104.80812,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KIEN,"Pine Ridge, Pine Ridge Airport",43.02556,-102.52306,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KDGW,"Douglas, Converse County Airport",42.79417,-105.38194,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KLAR,Laramie Regional Airport,41.3165,-105.67287,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KCUT,"Custer, Custer County Airport",43.73306,-103.6175,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KRAP,"Rapid City, Rapid City Regional Airport",44.04556,-103.05389,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KCPR,"Casper, Natrona County International Airport",42.8975,-106.47306,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KSAA,Saratoga WY,41.44483,-106.8235,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KRWL,Rawlins Municipal Airport,41.80648,-107.19516,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KDWX,Dixon Airport,41.03704,-107.49976,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KHDN,"Hayden, Yampa Valley Airport",40.48333,-107.21667,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KCAG,Craig-Moffat Airport,40.49297,-107.52394,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
+ZONA_22,Scottsbluff Regional,NE,KWRL,"Worland, Worland Municipal Airport",43.96583,-107.95083,"https://api.weather.gov/gridpoints/CYS/154,44/forecast/hourly",41.87,-103.59
