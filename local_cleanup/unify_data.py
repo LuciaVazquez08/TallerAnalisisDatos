@@ -5,7 +5,9 @@ import os
 from datetime import datetime
 from tqdm import tqdm
 
-### IMPORTANTE: configurar
+### IMPORTANTE:
+# Antes de usar configurar las credenciales de AWS (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY) en aws cli
+# ejecutar desde root/local_cleanup
 
 # Configuración
 BUCKET_NAME = "proyecto-clima-datos"  # Cambiar según corresponda
@@ -78,20 +80,25 @@ def process_forecasts(forecast_json):
                         "fcst_end": pd.to_datetime(p.get("endTime"), utc=True),
                         "is_daytime_fcst": p.get("isDaytime"),
                         "temp_fcst": p.get("temperature"),
-                        "dew_fcst": p.get("dewpoint", {}).get("value")
-                        if isinstance(p.get("dewpoint"), dict)
-                        else None,
-                        "hum_fcst": p.get("relativeHumidity", {}).get("value")
-                        if isinstance(p.get("relativeHumidity"), dict)
-                        else p.get("relativeHumidity"),
+                        "dew_fcst": (
+                            p.get("dewpoint", {}).get("value")
+                            if isinstance(p.get("dewpoint"), dict)
+                            else None
+                        ),
+                        "hum_fcst": (
+                            p.get("relativeHumidity", {}).get("value")
+                            if isinstance(p.get("relativeHumidity"), dict)
+                            else p.get("relativeHumidity")
+                        ),
                         "wind_speed_fcst": p.get("windSpeed"),
                         "wind_dir_fcst": p.get("windDirection"),
-                        "precip_prob_fcst": p.get("probabilityOfPrecipitation", {}).get("value"),
+                        "precip_prob_fcst": p.get("probabilityOfPrecipitation", {}).get(
+                            "value"
+                        ),
                         "short_fcst": p.get("shortForecast"),
                     }
                 )
     return pd.DataFrame(data)
-
 
 
 def unify():
@@ -114,15 +121,15 @@ def unify():
             all_obs.append(process_observations(raw))
         except Exception as e:
             print(f"Error en {f}: {e}")
-    
+
     df_obs_total = pd.concat(all_obs).drop_duplicates()
-    
+
     # Unir con maestro para obtener zona_id y metadata geográfica
     df_obs_total = pd.merge(
-        df_obs_total, 
-        df_maestro[['station_id', 'zona_id', 'lat_estacion', 'lon_estacion', 'estado']], 
-        on='station_id', 
-        how='left'
+        df_obs_total,
+        df_maestro[["station_id", "zona_id", "lat_estacion", "lon_estacion", "estado"]],
+        on="station_id",
+        how="left",
     )
 
     # 2. Cargar todos los Pronósticos
@@ -134,33 +141,33 @@ def unify():
             all_fcst.append(process_forecasts(raw))
         except Exception as e:
             print(f"Error en {f}: {e}")
-            
+
     df_fcst_total = pd.concat(all_fcst).drop_duplicates()
 
     # 3. Unificación Temporal (Merge Asof)
     # Para cada observación, buscamos el pronóstico que empezó ANTES o IGUAL al tiempo de obs
     print("\n--- Realizando alineación temporal ---")
-    
+
     # Ordenar es requisito para merge_asof
-    df_obs_total = df_obs_total.sort_values('obs_timestamp')
-    df_fcst_total = df_fcst_total.sort_values('fcst_start')
+    df_obs_total = df_obs_total.sort_values("obs_timestamp")
+    df_fcst_total = df_fcst_total.sort_values("fcst_start")
 
     # El merge_asof une por tiempo cercano dentro de cada zona_id
     df_final = pd.merge_asof(
         df_obs_total,
         df_fcst_total,
-        left_on='obs_timestamp',
-        right_on='fcst_start',
-        by='zona_id',
-        direction='backward' # Busca el periodo vigente
+        left_on="obs_timestamp",
+        right_on="fcst_start",
+        by="zona_id",
+        direction="backward",  # Busca el periodo vigente
     )
 
     # 4. Limpieza final y guardado
     # Filtramos para asegurar que la observación realmente caiga dentro del periodo del pronóstico
-    df_final = df_final[df_final['obs_timestamp'] < df_final['fcst_end']]
+    df_final = df_final[df_final["obs_timestamp"] < df_final["fcst_end"]]
 
     print(f"\nUnificación completada. Filas finales: {len(df_final)}")
-    
+
     df_final.to_parquet(OUTPUT_PARQUET, index=False)
     print(f"Dataset guardado en: {OUTPUT_PARQUET}")
 
