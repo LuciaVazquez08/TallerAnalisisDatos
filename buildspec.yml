@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+
+  build:
+    commands:
+      echo "==== BUILD LAMBDA RECOLECTOR ===="
+
+      # carpeta temporal
+      mkdir build_recolector
+
+      # instalar dependencias
+      pip install pandas requests -t build_recolector/
+
+      # copiar SOLO lo necesario
+      cp lambda\Recolector datos\lambda_function.py build_recolector/
+      cp lambda\Recolector datos\estaciones_zonas.csv build_recolector/
+
+      # crear zip
+      cd build_recolector
+      zip -r ../lambda_recolector.zip .
+      cd ..
+
+artifacts:
+  files:
+    - lambda_recolector.zip
