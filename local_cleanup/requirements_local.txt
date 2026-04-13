@@ -1,0 +1,7 @@
+pandas
+boto3
+pyarrow
+scikit-learn
+matplotlib
+seaborn
+tqdm
