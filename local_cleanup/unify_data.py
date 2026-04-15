@@ -73,13 +73,22 @@ def process_forecasts(forecast_json):
         if fcst and "properties" in fcst:
             periods = fcst["properties"].get("periods", [])
             for p in periods:
+                raw_temp = p.get("temperature")
+                unit = p.get("temperatureUnit", "F")
+                
+                # Conversión de Fahrenheit a Celsius si es necesario
+                if unit == "F" and raw_temp is not None:
+                    temp_c = (raw_temp - 32) * 5 / 9
+                else:
+                    temp_c = raw_temp
+
                 data.append(
                     {
                         "zona_id": z_id,
                         "fcst_start": pd.to_datetime(p.get("startTime"), utc=True),
                         "fcst_end": pd.to_datetime(p.get("endTime"), utc=True),
                         "is_daytime_fcst": p.get("isDaytime"),
-                        "temp_fcst": p.get("temperature"),
+                        "temp_fcst": temp_c,
                         "dew_fcst": (
                             p.get("dewpoint", {}).get("value")
                             if isinstance(p.get("dewpoint"), dict)
