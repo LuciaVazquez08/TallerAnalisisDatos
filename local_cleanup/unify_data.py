@@ -151,7 +151,11 @@ def unify():
         except Exception as e:
             print(f"Error en {f}: {e}")
 
-    df_fcst_total = pd.concat(all_fcst).drop_duplicates()
+    df_fcst_total = pd.concat(all_fcst)
+    
+    # Asegurar que para cada zona y cada inicio de periodo solo tenemos la versión más reciente
+    # Como fcst_files viene ordenado por nombre (timestamp), el último es el más reciente
+    df_fcst_total = df_fcst_total.drop_duplicates(subset=["zona_id", "fcst_start"], keep="last")
 
     # 3. Unificación Temporal (Merge Asof)
     # Para cada observación, buscamos el pronóstico que empezó ANTES o IGUAL al tiempo de obs
