@@ -45,6 +45,25 @@ def descargar_una_obs(s_id):
             if intento == 0: time.sleep(0.5)
     return s_id, None
 
+def descargar_un_pronostico(args):
+
+    s_id, url_fcst = args
+    for intento in range(2):
+        try:
+            res = requests.get(url_fcst, timeout=10)
+            if res.status_code == 200:
+                data = res.json()
+                if 'properties' in data and 'periods' in data['properties']:
+                    data['properties']['periods'] = data['properties']['periods'][:1]
+                    return s_id, data
+                return s_id, data 
+            if res.status_code == 404:
+                break
+        except:
+            if intento == 0: time.sleep(0.5)
+    return s_id, None
+
+
 def lambda_handler(event, context):
     """Punto de entrada de la función AWS Lambda.
  
@@ -91,22 +110,22 @@ def lambda_handler(event, context):
     lote_observaciones = {}
     lote_pronosticos = {}
 
-    df_zonas = df[['zona_id', 'forecast_hourly_url']].drop_duplicates(subset=['zona_id'])
-    for _, row in df_zonas.iterrows():
-        try:
-            res = requests.get(row['forecast_hourly_url'], timeout=10)
-            if res.status_code == 200:
-                lote_pronosticos[row['zona_id']] = res.json()
-        except:
-            continue
-
+    # Descarga paralela de observaciones
     with ThreadPoolExecutor(max_workers=20) as executor:
-        resultados = list(executor.map(descargar_una_obs, df['station_id']))
+        res_obs = list(executor.map(descargar_una_obs, df['station_id']))
 
-    for s_id, data in resultados:
+    for s_id, data in res_obs:
         if data:
             lote_observaciones[s_id] = data
 
+    # Descarga paralela de pronósticos 
+    tareas_fcst = list(zip(df['station_id'], df['forecast_hourly_url']))
+    with ThreadPoolExecutor(max_workers=20) as executor:
+        res_fcst = list(executor.map(descargar_un_pronostico, tareas_fcst))
+
+    for s_id, data in res_fcst:
+        if data:
+            lote_pronosticos[s_id] = data
 
     try:
         s3.put_object(
@@ -129,5 +148,5 @@ def lambda_handler(event, context):
         "status": "success",
         "duration_sec": round(duracion, 2),
         "obs_count": len(lote_observaciones),
-        "zones_count": len(lote_pronosticos)
+        "forecasts_count": len(lote_pronosticos)
     }
