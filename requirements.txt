@@ -1,3 +1,6 @@
 requests
 pandas
 boto3
+openmeteo-requests
+retry-requests
+requests-cache
