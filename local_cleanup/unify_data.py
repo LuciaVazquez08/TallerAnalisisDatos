@@ -66,10 +66,15 @@ def process_observations(obs_json):
     return pd.DataFrame(data)
 
 
-def process_forecasts(forecast_json):
-    """Aplana el JSON de pronósticos a un DataFrame con variables extendidas."""
+def process_forecasts(forecast_json, df_maestro):
+    """Aplana el JSON de pronósticos a un DataFrame con variables extendidas.
+    Soporta tanto el nuevo formato (key = station_id) como el viejo (key = zona_id).
+    """
     data = []
-    for z_id, fcst in forecast_json.items():
+    # Set de estaciones válidas para identificar el tipo de key
+    valid_stations = set(df_maestro["station_id"].unique())
+    
+    for key, fcst in forecast_json.items():
         if fcst and "properties" in fcst:
             periods = fcst["properties"].get("periods", [])
             for p in periods:
@@ -82,31 +87,45 @@ def process_forecasts(forecast_json):
                 else:
                     temp_c = raw_temp
 
-                data.append(
-                    {
-                        "zona_id": z_id,
-                        "fcst_start": pd.to_datetime(p.get("startTime"), utc=True),
-                        "fcst_end": pd.to_datetime(p.get("endTime"), utc=True),
-                        "is_daytime_fcst": p.get("isDaytime"),
-                        "temp_fcst": temp_c,
-                        "dew_fcst": (
-                            p.get("dewpoint", {}).get("value")
-                            if isinstance(p.get("dewpoint"), dict)
-                            else None
-                        ),
-                        "hum_fcst": (
-                            p.get("relativeHumidity", {}).get("value")
-                            if isinstance(p.get("relativeHumidity"), dict)
-                            else p.get("relativeHumidity")
-                        ),
-                        "wind_speed_fcst": p.get("windSpeed"),
-                        "wind_dir_fcst": p.get("windDirection"),
-                        "precip_prob_fcst": p.get("probabilityOfPrecipitation", {}).get(
-                            "value"
-                        ),
-                        "short_fcst": p.get("shortForecast"),
-                    }
-                )
+                entry_base = {
+                    "fcst_start": pd.to_datetime(p.get("startTime"), utc=True),
+                    "fcst_end": pd.to_datetime(p.get("endTime"), utc=True),
+                    "is_daytime_fcst": p.get("isDaytime"),
+                    "temp_fcst": temp_c,
+                    "dew_fcst": (
+                        p.get("dewpoint", {}).get("value")
+                        if isinstance(p.get("dewpoint"), dict)
+                        else None
+                    ),
+                    "hum_fcst": (
+                        p.get("relativeHumidity", {}).get("value")
+                        if isinstance(p.get("relativeHumidity"), dict)
+                        else p.get("relativeHumidity")
+                    ),
+                    "wind_speed_fcst": p.get("windSpeed"),
+                    "wind_dir_fcst": p.get("windDirection"),
+                    "precip_prob_fcst": p.get("probabilityOfPrecipitation", {}).get(
+                        "value"
+                    ),
+                    "short_fcst": p.get("shortForecast"),
+                }
+
+                if key in valid_stations:
+                    # Nuevo formato: El pronóstico es específico para esta estación
+                    entry = entry_base.copy()
+                    entry["station_id"] = key
+                    data.append(entry)
+                elif key.startswith("ZONA_"):
+                    # Viejo formato: Mapear este pronóstico de zona a todas sus estaciones
+                    stations_in_zone = df_maestro[df_maestro["zona_id"] == key]["station_id"].tolist()
+                    for s_id in stations_in_zone:
+                        entry = entry_base.copy()
+                        entry["station_id"] = s_id
+                        data.append(entry)
+                else:
+                    # Formato desconocido, ignorar o loggear
+                    pass
+
     return pd.DataFrame(data)
 
 
@@ -147,15 +166,16 @@ def unify():
     for f in tqdm(fcst_files):
         try:
             raw = read_json_from_s3(f)
-            all_fcst.append(process_forecasts(raw))
+            # Pasamos df_maestro para mapear zonas a estaciones si es necesario
+            all_fcst.append(process_forecasts(raw, df_maestro))
         except Exception as e:
             print(f"Error en {f}: {e}")
 
     df_fcst_total = pd.concat(all_fcst)
     
-    # Asegurar que para cada zona y cada inicio de periodo solo tenemos la versión más reciente
+    # Asegurar que para cada estación y cada inicio de periodo solo tenemos la versión más reciente
     # Como fcst_files viene ordenado por nombre (timestamp), el último es el más reciente
-    df_fcst_total = df_fcst_total.drop_duplicates(subset=["zona_id", "fcst_start"], keep="last")
+    df_fcst_total = df_fcst_total.drop_duplicates(subset=["station_id", "fcst_start"], keep="last")
 
     # 3. Unificación Temporal (Merge Asof)
     # Para cada observación, buscamos el pronóstico que empezó ANTES o IGUAL al tiempo de obs
@@ -165,13 +185,13 @@ def unify():
     df_obs_total = df_obs_total.sort_values("obs_timestamp")
     df_fcst_total = df_fcst_total.sort_values("fcst_start")
 
-    # El merge_asof une por tiempo cercano dentro de cada zona_id
+    # El merge_asof une por tiempo cercano dentro de cada station_id
     df_final = pd.merge_asof(
         df_obs_total,
         df_fcst_total,
         left_on="obs_timestamp",
         right_on="fcst_start",
-        by="zona_id",
+        by="station_id",
         direction="backward",  # Busca el periodo vigente
     )
 
