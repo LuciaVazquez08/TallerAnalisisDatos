@@ -199,6 +199,19 @@ def unify():
     # Filtramos para asegurar que la observación realmente caiga dentro del periodo del pronóstico
     df_final = df_final[df_final["obs_timestamp"] < df_final["fcst_end"]]
 
+    # --- FILTRO DE OUTLIERS TÉCNICOS (GLITCH DE PROVEEDOR) ---
+    # Se detectó un error masivo en el API de la NWS (National Weather Service) 
+    # afectando el ciclo de pronóstico del 2026-04-23 20:00 UTC en el sureste de Wisconsin.
+    # El API devolvió valores de temperatura de hasta 60°C (140°F) y humedad del 8%,
+    # lo cual es físicamente imposible para la región y época. 
+    # Estos valores "basura" distorsionan el análisis estadístico y los modelos de ML.
+    # Descartamos cualquier pronóstico de temperatura > 50°C.
+    anomalous_count = (df_final["temp_fcst"] > 50).sum()
+    if anomalous_count > 0:
+        print(f"Limpieza: Eliminando {anomalous_count} registros con errores técnicos de la NWS (>50°C).")
+        df_final = df_final[df_final["temp_fcst"] <= 50]
+    # ----------------------------------------------------------
+
     print(f"\nUnificación completada. Filas finales: {len(df_final)}")
 
     df_final.to_parquet(OUTPUT_PARQUET, index=False)
