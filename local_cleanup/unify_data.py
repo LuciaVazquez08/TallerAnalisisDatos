@@ -66,6 +66,35 @@ def process_observations(obs_json):
     return pd.DataFrame(data)
 
 
+def clean_wind_speed(val):
+    """
+    Limpia el string de velocidad del viento de la NWS y lo convierte de mph a km/h.
+    La NWS usa mph, mientras que Open-Meteo (observaciones) usa km/h.
+    """
+    if val is None:
+        return None
+
+    # Si es un rango (ej: '5 to 10 mph'), tomamos el valor superior o el promedio?
+    # El notebook original solo quitaba ' mph', así que intentamos extraer el primer número
+    # o el valor simple si no es rango.
+    try:
+        if isinstance(val, str):
+            s = val.replace(" mph", "").strip()
+            if " to " in s:
+                # Caso rango: promediamos para ser más representativos
+                parts = s.split(" to ")
+                val_num = (float(parts[0]) + float(parts[1])) / 2
+            else:
+                val_num = float(s)
+        else:
+            val_num = float(val)
+
+        # Conversión mph -> km/h (1 mph = 1.60934 km/h)
+        return val_num * 1.60934
+    except (ValueError, TypeError):
+        return None
+
+
 def process_forecasts(forecast_json, df_maestro):
     """Aplana el JSON de pronósticos a un DataFrame con variables extendidas.
     Soporta tanto el nuevo formato (key = station_id) como el viejo (key = zona_id).
@@ -73,14 +102,14 @@ def process_forecasts(forecast_json, df_maestro):
     data = []
     # Set de estaciones válidas para identificar el tipo de key
     valid_stations = set(df_maestro["station_id"].unique())
-    
+
     for key, fcst in forecast_json.items():
         if fcst and "properties" in fcst:
             periods = fcst["properties"].get("periods", [])
             for p in periods:
                 raw_temp = p.get("temperature")
                 unit = p.get("temperatureUnit", "F")
-                
+
                 # Conversión de Fahrenheit a Celsius si es necesario
                 if unit == "F" and raw_temp is not None:
                     temp_c = (raw_temp - 32) * 5 / 9
@@ -102,7 +131,7 @@ def process_forecasts(forecast_json, df_maestro):
                         if isinstance(p.get("relativeHumidity"), dict)
                         else p.get("relativeHumidity")
                     ),
-                    "wind_speed_fcst": p.get("windSpeed"),
+                    "wind_speed_fcst": clean_wind_speed(p.get("windSpeed")),
                     "wind_dir_fcst": p.get("windDirection"),
                     "precip_prob_fcst": p.get("probabilityOfPrecipitation", {}).get(
                         "value"
@@ -117,7 +146,9 @@ def process_forecasts(forecast_json, df_maestro):
                     data.append(entry)
                 elif key.startswith("ZONA_"):
                     # Viejo formato: Mapear este pronóstico de zona a todas sus estaciones
-                    stations_in_zone = df_maestro[df_maestro["zona_id"] == key]["station_id"].tolist()
+                    stations_in_zone = df_maestro[df_maestro["zona_id"] == key][
+                        "station_id"
+                    ].tolist()
                     for s_id in stations_in_zone:
                         entry = entry_base.copy()
                         entry["station_id"] = s_id
@@ -172,10 +203,12 @@ def unify():
             print(f"Error en {f}: {e}")
 
     df_fcst_total = pd.concat(all_fcst)
-    
+
     # Asegurar que para cada estación y cada inicio de periodo solo tenemos la versión más reciente
     # Como fcst_files viene ordenado por nombre (timestamp), el último es el más reciente
-    df_fcst_total = df_fcst_total.drop_duplicates(subset=["station_id", "fcst_start"], keep="last")
+    df_fcst_total = df_fcst_total.drop_duplicates(
+        subset=["station_id", "fcst_start"], keep="last"
+    )
 
     # 3. Unificación Temporal (Merge Asof)
     # Para cada observación, buscamos el pronóstico que empezó ANTES o IGUAL al tiempo de obs
@@ -200,15 +233,17 @@ def unify():
     df_final = df_final[df_final["obs_timestamp"] < df_final["fcst_end"]]
 
     # --- FILTRO DE OUTLIERS TÉCNICOS (GLITCH DE PROVEEDOR) ---
-    # Se detectó un error masivo en el API de la NWS (National Weather Service) 
+    # Se detectó un error masivo en el API de la NWS (National Weather Service)
     # afectando el ciclo de pronóstico del 2026-04-23 20:00 UTC en el sureste de Wisconsin.
     # El API devolvió valores de temperatura de hasta 60°C (140°F) y humedad del 8%,
-    # lo cual es físicamente imposible para la región y época. 
+    # lo cual es físicamente imposible para la región y época.
     # Estos valores "basura" distorsionan el análisis estadístico y los modelos de ML.
     # Descartamos cualquier pronóstico de temperatura > 50°C.
     anomalous_count = (df_final["temp_fcst"] > 50).sum()
     if anomalous_count > 0:
-        print(f"Limpieza: Eliminando {anomalous_count} registros con errores técnicos de la NWS (>50°C).")
+        print(
+            f"Limpieza: Eliminando {anomalous_count} registros con errores técnicos de la NWS (>50°C)."
+        )
         df_final = df_final[df_final["temp_fcst"] <= 50]
     # ----------------------------------------------------------
 
