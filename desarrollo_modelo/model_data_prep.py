@@ -67,11 +67,13 @@ def prepare_data(input_path="../local_cleanup/clima_unificado.parquet", output_p
         'temp_fcst_roll3_mean', 'temp_fcst_roll3_std'
     ]
     
-    # Imputación de NaNs en features (producidos por lags/rolling) usando ffill/bfill por estación
+    # Imputación de NaNs en features (producidos por lags/rolling)
+    # Usamos ÚNICAMENTE ffill() para evitar leakage (no traer datos del futuro con bfill).
     for col in feature_cols:
-        df[col] = df.groupby('station_id')[col].transform(lambda x: x.ffill().bfill())
+        df[col] = df.groupby('station_id')[col].transform(lambda x: x.ffill())
     
-    # Caso borde: si una estación no tiene datos suficientes, llenamos con 0 para evitar errores en XGBoost
+    # Caso borde: para las primeras filas de cada estación donde ffill no tiene qué copiar, 
+    # llenamos con 0 para que XGBoost no reciba NaNs.
     df[feature_cols] = df[feature_cols].fillna(0)
 
     print(f"Dataset procesado: {len(df)} registros listos para modelado.")

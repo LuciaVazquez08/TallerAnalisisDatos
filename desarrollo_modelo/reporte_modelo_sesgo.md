@@ -36,9 +36,9 @@ El modelo fue evaluado en el último 15% de los datos cronológicos (~19,000 reg
 Como se observa en `eval_bias_hourly_temp.png` y `eval_bias_hourly_hum.png`, el modelo de ML reduce drásticamente el error promedio por hora. El sesgo de humedad se ha estabilizado notablemente durante el ciclo nocturno.
 
 ### 3.3 Importancia de Variables
-El análisis en `eval_feature_importance_combined.png` muestra que:
-*   **Temperatura:** Depende fuertemente del pronóstico base y los lags de error.
-*   **Humedad:** Muestra una dependencia aún más marcada por los componentes temporales (`hour_sin/cos`), confirmando que el sesgo de humedad es altamente sensible al ciclo de evaporación.
+El análisis en `eval_feature_importance_temp.png` y `eval_feature_importance_hum.png` muestra los predictores más relevantes para cada modelo:
+*   **Temperatura:** Depende fuertemente del pronóstico base y los lags de error, lo que indica una alta persistencia en los fallos del modelo NWS.
+*   **Humedad:** Muestra una dependencia marcada por los componentes temporales (`hour_sin/cos`), confirmando que el sesgo de humedad es altamente sensible al ciclo de evaporación diurno.
 
 ## 4. Fase Experimental: Posibilidades de Mejora
 

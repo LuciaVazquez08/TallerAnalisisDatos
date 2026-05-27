@@ -108,25 +108,29 @@ def run_evaluation():
     
     # Temperatura (Estimator 0)
     xgb_temp = model.estimators_[0]
-    importances_temp = pd.Series(xgb_temp.feature_importances_, index=FEATURES).sort_values(ascending=False)
+    # Usamos ascending=True para que al graficar horizontalmente el más importante quede arriba
+    importances_temp = pd.Series(xgb_temp.feature_importances_, index=FEATURES).sort_values(ascending=True)
+    
+    plt.figure(figsize=(10, 8))
+    importances_temp.plot(kind='barh', color='salmon')
+    plt.title("Importancia de Features: Modelo Temperatura")
+    plt.xlabel("Importancia Relativa")
+    plt.tight_layout()
+    plt.savefig("eval_feature_importance_temp.png")
     
     # Humedad (Estimator 1)
     xgb_hum = model.estimators_[1]
-    importances_hum = pd.Series(xgb_hum.feature_importances_, index=FEATURES).sort_values(ascending=False)
+    importances_hum = pd.Series(xgb_hum.feature_importances_, index=FEATURES).sort_values(ascending=True)
     
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 8))
-    
-    importances_temp.plot(kind='bar', ax=ax1, color='salmon')
-    ax1.set_title("Importancia de Features: Modelo Temperatura")
-    
-    importances_hum.plot(kind='bar', ax=ax2, color='skyblue')
-    ax2.set_title("Importancia de Features: Modelo Humedad")
-    
+    plt.figure(figsize=(10, 8))
+    importances_hum.plot(kind='barh', color='skyblue')
+    plt.title("Importancia de Features: Modelo Humedad")
+    plt.xlabel("Importancia Relativa")
     plt.tight_layout()
-    plt.savefig("eval_feature_importance_combined.png")
+    plt.savefig("eval_feature_importance_hum.png")
 
     print("\nEvaluación completada con éxito.")
-    print("Gráficos generados: Scatterplots, Sesgo Horario (Temp/Hum) e Importancia de Features.")
+    print("Gráficos generados: Scatterplots, Sesgo Horario (Temp/Hum) e Importancia (Temp/Hum).")
 
 if __name__ == "__main__":
     run_evaluation()
