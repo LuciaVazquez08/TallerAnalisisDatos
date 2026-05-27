@@ -25,7 +25,7 @@ Se utilizó **Optuna** para la búsqueda bayesiana de hiperparámetros, optimiza
 ## 3. Resultados
 
 ### 3.1 Mejora en Métricas (Set de Test)
-El modelo fue evaluado en el último 15% de los datos cronológicos (~19,000 registros).
+El modelo fue evaluado en el último 15% de los datos cronológicos (~19,000 registros). El dataset total comprende una ventana de alta densidad de 15 días (Abril-Mayo 2026).
 
 | Variable | MAE Original (NWS) | MAE Corregido (ML) | Mejora % |
 | :--- | :---: | :---: | :---: |
@@ -49,10 +49,10 @@ Se incorporó el error de la hora anterior (`lag1`). Esto elevó la mejora del 1
 Se agregaron promedios y desviaciones estándar móviles de las últimas 3 horas del pronóstico, permitiendo al modelo detectar cambios bruscos de tendencia (frentes fríos) que el pronóstico horario suaviza.
 
 ### 4.3 Propuestas Futuras para los Docentes
-1.  **Ensamblado Heterogéneo:** Combinar XGBoost con LightGBM mediante *Stacking*.
-2.  **Embeddings de Estación:** Entrenar representaciones vectoriales por estación para capturar microclimas locales.
-3.  **Redes Recurrentes (LSTM/GRU):** Modelar la secuencia temporal de forma nativa.
-4.  **Datos de Satélite:** Integrar nubosidad en tiempo real (GOES-16) para corregir errores de radiación.
+1.  **Optimización de la Ventana de Look-back:** Implementar una búsqueda de hiperparámetros (vía Optuna) para determinar el periodo de entrenamiento óptimo (ej. últimos 7 o 14 días). Esto permitiría al modelo adaptarse al *Concept Drift* estacional, ignorando datos históricos que ya no representen la dinámica climática actual.
+2.  **Ensamblado Heterogéneo:** Combinar XGBoost con LightGBM mediante *Stacking* para reducir la varianza y mejorar la generalización.
+3.  **Embeddings de Estación:** Entrenar representaciones vectoriales por estación que capturen microclimas locales y efectos de isla de calor urbana de forma latente.
+4.  **Redes Recurrentes (LSTM/GRU):** Evaluar arquitecturas que modelen la secuencia temporal de forma nativa para comparación con el enfoque de lags manuales.
 
 ## 5. Conclusión
-La implementación del modelo multi-salida XGBoost optimizado con Optuna logró una reducción del error superior al 33% en ambas variables. La documentación y visualizaciones generadas confirman que la corrección es robusta y físicamente coherente.
+La implementación del modelo multi-salida XGBoost optimizado con Optuna logró una reducción del error superior al 33% en ambas variables. La documentación y visualizaciones generadas confirman que la corrección es robusta y físicamente coherente para el periodo analizado.
