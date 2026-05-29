@@ -6,3 +6,7 @@ retry-requests
 requests-cache
 tqdm
 pyarrow
+plotly
+xgboost
+joblib
+scikit-learn
