@@ -92,12 +92,23 @@ def run_training():
     y = df[TARGETS]
     
     # 1. Separación de Datos (Train-Val / Test)
-    # Usamos el último 15% como TEST FINAL (datos nunca vistos por Optuna)
+    # Usamos el último 15% como TEST FINAL (~7 días en un dataset de 48 días)
     split_idx = int(len(df) * 0.85)
-    X_train_full, X_test = X.iloc[:split_idx], X.iloc[split_idx:]
-    y_train_full, y_test = y.iloc[:split_idx], y.iloc[split_idx:]
+    df_train_all = df.iloc[:split_idx]
+    X_test = df[FEATURES].iloc[split_idx:]
+    y_test = df[TARGETS].iloc[split_idx:]
     
-    print(f"Set Entrenamiento/Val: {len(X_train_full)} | Set Test Final: {len(X_test)}")
+    # Aplicar ventana de Look-back Óptima (21 días)
+    # Filtramos para usar solo los 21 días previos al set de test
+    test_start_time = df.iloc[split_idx]['obs_timestamp']
+    train_start_time = test_start_time - pd.Timedelta(days=21)
+    
+    df_train_filtered = df_train_all[df_train_all['obs_timestamp'] >= train_start_time].copy()
+    X_train_full = df_train_filtered[FEATURES]
+    y_train_full = df_train_filtered[TARGETS]
+    
+    print(f"Pool total de entreno: {len(df_train_all)} | Ventana 21d: {len(X_train_full)} | Test Final: {len(X_test)}")
+    print(f"Rango Entreno: {df_train_filtered['obs_timestamp'].min()} a {df_train_filtered['obs_timestamp'].max()}")
     
     # 2. Generación de Splits Temporales
     cv_splits = list(blocked_timeseries_split(len(X_train_full), n_splits=3))

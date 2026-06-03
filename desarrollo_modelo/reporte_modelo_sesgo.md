@@ -25,25 +25,25 @@ Se utilizó **Optuna** para la búsqueda bayesiana de hiperparámetros, optimiza
 ## 3. Resultados
 
 ### 3.1 Mejora en Métricas (Set de Test)
-El modelo fue evaluado en el último 15% de los datos cronológicos (~19,000 registros). El dataset total comprende una ventana de alta densidad de 15 días (Abril-Mayo 2026).
+El modelo fue evaluado en el último 15% de los datos cronológicos (~66,000 registros). El dataset expandido comprende una ventana de 48 días (Abril-Junio 2026), entrenando con una ventana óptima de **21 días**.
 
 | Variable | MAE Original (NWS) | MAE Corregido (ML) | Mejora % |
 | :--- | :---: | :---: | :---: |
-| Temperatura | 1.1924 | 0.7860 | **34.08%** |
-| Humedad | 6.7973 | 4.5501 | **33.06%** |
+| Temperatura | 1.3049 | 0.7198 | **44.84%** |
+| Humedad | 7.2023 | 3.8486 | **46.56%** |
 
 ### 3.2 Análisis de Sesgo Horario
-Como se observa en `eval_bias_hourly_temp.png` y `eval_bias_hourly_hum.png`, el modelo de ML reduce drásticamente el error promedio por hora. El sesgo de humedad se ha estabilizado notablemente durante el ciclo nocturno.
+Como se observa en `eval_bias_hourly_temp.png` y `eval_bias_hourly_hum.png`, el modelo de ML reduce drásticamente el error promedio por hora. La expansión del dataset ha permitido una corrección mucho más precisa de los picos de humedad nocturnos.
 
 ### 3.3 Importancia de Variables
-El análisis en `eval_feature_importance_temp.png` y `eval_feature_importance_hum.png` muestra los predictores más relevantes para cada modelo:
-*   **Temperatura:** Depende fuertemente del pronóstico base y los lags de error, lo que indica una alta persistencia en los fallos del modelo NWS.
-*   **Humedad:** Muestra una dependencia marcada por los componentes temporales (`hour_sin/cos`), confirmando que el sesgo de humedad es altamente sensible al ciclo de evaporación diurno.
+El análisis muestra los predictores más relevantes:
+*   **Temperatura:** El diferencial de pronóstico y los lags siguen siendo críticos, pero la latitud/longitud han ganado peso al usar un dataset más largo que cubre más variabilidad climática.
+*   **Humedad:** La dependencia del ciclo diurno (`hour_sin/cos`) se mantiene como el factor dominante.
 
-## 4. Fase Experimental: Posibilidades de Mejora
+## 4. Fase Experimental: Resultados de Optimización
 
-### 4.1 Implementación de Memoria de Corto Plazo (Lags)
-Se incorporó el error de la hora anterior (`lag1`). Esto elevó la mejora del 10% inicial al **34%**, indicando que el sesgo tiene una fuerte componente de persistencia.
+### 4.1 Optimización de la Ventana de Look-back
+Se realizó un experimento variando la ventana de entrenamiento de 1 a 35 días. Se determinó que **21 días** es el punto óptimo, logrando un equilibrio entre capturar la dinámica climática reciente y evitar el *concept drift* de periodos muy antiguos. Esta optimización permitió subir la mejora del ~34% inicial a un **~45%** actual.
 
 ### 4.2 Estadísticas Móviles (Rolling Window)
 Se agregaron promedios y desviaciones estándar móviles de las últimas 3 horas del pronóstico, permitiendo al modelo detectar cambios bruscos de tendencia (frentes fríos) que el pronóstico horario suaviza.

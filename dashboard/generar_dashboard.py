@@ -840,11 +840,11 @@ def generate_dashboard():
                         <div>
                             <h4 style="font-size:0.95rem; font-weight:600; margin-bottom:8px; color:var(--accent);">Resumen Ejecutivo</h4>
                             <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
-                            El modelo XGBoost corrige los sesgos del ciclo diurno del modelo físico de la NWS utilizando el diferencial térmico, inercia térmica y lags de error. La mejora promedio combinada supera el <strong>34.0%</strong> en todo el conjunto de prueba (evaluación temporal fuera de muestra).
+                            El modelo XGBoost corrige los sesgos del ciclo diurno del modelo físico de la NWS utilizando el diferencial térmico, inercia térmica y lags de error. La mejora promedio combinada supera el <strong>45.0%</strong> en todo el conjunto de prueba (evaluación temporal fuera de muestra).
                         </p>
                     </div>
                     <div style="font-size:0.8rem; border-top:1px solid var(--border-color); padding-top:8px; display:flex; justify-content:space-between; color:var(--text-muted);">
-                        <span>🕒 Entrenamiento: 13 días | 🔬 Testeo: Temporal (15%)</span>
+                        <span>🕒 Dataset: 48 días | Ventana óptima: 21 días | 🔬 Testeo: Temporal (15%)</span>
                         <span>📡 Estaciones evaluadas: {len(stations_list)}</span>
                     </div>
                 </div>
