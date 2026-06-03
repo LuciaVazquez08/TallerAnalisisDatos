@@ -1009,13 +1009,13 @@ def generate_dashboard():
                             Importancia de Variables (Global)
                         </h3>
                         <div style="display:flex; gap:6px;">
-                            <button id="btn-imp-xgb" class="target-btn active" style="padding:4px 8px;" onclick="changeImpType('xgb')">Interna XGBoost</button>
-                            <button id="btn-imp-pfi" class="target-btn" style="padding:4px 8px;" onclick="changeImpType('pfi')">Permutación (PFI)</button>
+                            <button id="btn-imp-xgb" class="target-btn" style="padding:4px 8px;" onclick="changeImpType('xgb')">Interna XGBoost</button>
+                            <button id="btn-imp-pfi" class="target-btn active" style="padding:4px 8px;" onclick="changeImpType('pfi')">Permutación (PFI)</button>
                         </div>
                     </div>
                     <div id="feature-importance-chart" class="chart-box-sm"></div>
                     <p style="font-size:0.75rem; color:var(--text-muted); line-height:1.4; margin-top:8px;">
-                        <span id="importance-desc-text">Muestra la importancia interna de XGBoost basada en la ganancia (Gain) de cada predictor para construir los árboles.</span>
+                        <span id="importance-desc-text">Muestra el decremento medio en el score del modelo al permutar aleatoriamente cada característica en el set de prueba.</span>
                     </p>
                 </div>
             </div>
@@ -1087,7 +1087,7 @@ def generate_dashboard():
             showUncertainty: false,
             activeShapTarget: 'temp',
             selectedObsIdx: 0,
-            impType: 'xgb',
+            impType: 'pfi',
             pdpTarget: 'temp',
             rawStationData: [],
             filteredData: []
@@ -1320,7 +1320,7 @@ def generate_dashboard():
             const colors = DB.stations.map(s => s.imp_avg);
             
             const data = [{{
-                type: 'scattermapbox',
+                type: 'scattergeo',
                 lat: lats,
                 lon: lons,
                 mode: 'markers',
@@ -1328,11 +1328,11 @@ def generate_dashboard():
                     size: size,
                     color: colors,
                     colorscale: [
-                        [0.0, 'rgb(185, 28, 28)'],   // Red for deterioration / low improvement
-                        [0.3, 'rgb(248, 113, 113)'], // Light Red
-                        [0.5, 'rgb(241, 245, 249)'], // Neutral Light Gray (0%)
-                        [0.7, 'rgb(110, 231, 183)'], // Light Green
-                        [1.0, 'rgb(4, 120, 87)']     // Dark Green for high improvement
+                        [0.0, 'rgb(185, 28, 28)'],
+                        [0.3, 'rgb(248, 113, 113)'],
+                        [0.5, 'rgb(241, 245, 249)'],
+                        [0.7, 'rgb(110, 231, 183)'],
+                        [1.0, 'rgb(4, 120, 87)']
                     ],
                     cmin: -50,
                     cmax: 50,
@@ -1350,10 +1350,14 @@ def generate_dashboard():
             }}];
             
             const layout = {{
-                mapbox: {{
-                    style: 'carto-positron',
-                    center: {{ lat: 38.0, lon: -97.0 }},
-                    zoom: 3
+                geo: {{
+                    scope: 'usa',
+                    projection: {{ type: 'albers usa' }},
+                    showland: true,
+                    landcolor: 'rgb(250, 250, 250)',
+                    subunitcolor: 'rgb(217, 217, 217)',
+                    showlakes: true,
+                    lakecolor: 'rgb(255, 255, 255)'
                 }},
                 margin: {{ l: 0, r: 0, t: 0, b: 0 }},
                 showlegend: false
@@ -1667,7 +1671,7 @@ def generate_dashboard():
                 plot_bgcolor: '#ffffff',
                 paper_bgcolor: 'rgba(0,0,0,0)',
                 yaxis: {{ autorange: 'reverse', tickfont: {{ size: 9 }} }},
-                xaxis: {{ gridcolor: '#f1f5f9', title: state.impType === 'xgb' ? 'Ganancia del Árbol (Gain)' : 'Decremento del Score (MAE)' }}
+                xaxis: {{ gridcolor: '#f1f5f9', title: state.impType === 'xgb' ? 'Ganancia del Árbol (Gain)' : 'Decremento del Score (MAE °C / %)' }}
             }};
             
             Plotly.newPlot('feature-importance-chart', [traceTemp, traceHum], layout, {{ responsive: true }});
@@ -1717,9 +1721,9 @@ def generate_dashboard():
                 yaxis: {{ gridcolor: '#f1f5f9', linecolor: '#cbd5e1' }}
             }};
             
-            Plotly.newPlot('pdp-hour-chart', [traceHour], {{ ...layoutCommon, xaxis: {{ ...layoutCommon.xaxis, title: 'Hora del Día' }}, yaxis: {{ ...layoutCommon.yaxis, title: state.pdpTarget === 'temp' ? 'Pred. Temp (°C)' : 'Pred. Hum (%)' }} }}, {{ responsive: true }});
-            Plotly.newPlot('pdp-fcst-chart', [traceFcst], {{ ...layoutCommon, xaxis: {{ ...layoutCommon.xaxis, title: state.pdpTarget === 'temp' ? 'Pronóstico Base Temp. (°C)' : 'Pronóstico Base Hum. (%)' }} }}, {{ responsive: true }});
-            Plotly.newPlot('pdp-lag-chart', [traceLag], {{ ...layoutCommon, xaxis: {{ ...layoutCommon.xaxis, title: state.pdpTarget === 'temp' ? 'Lag de Error Temp. (°C)' : 'Lag de Error Hum. (%)' }} }}, {{ responsive: true }});
+            Plotly.newPlot('pdp-hour-chart', [traceHour], {{ ...layoutCommon, xaxis: {{ ...layoutCommon.xaxis, title: 'Hora del Día (h)' }}, yaxis: {{ ...layoutCommon.yaxis, title: state.pdpTarget === 'temp' ? 'Impacto Marginal Temp. (°C)' : 'Impacto Marginal Hum. (%)' }} }}, {{ responsive: true }});
+            Plotly.newPlot('pdp-fcst-chart', [traceFcst], {{ ...layoutCommon, xaxis: {{ ...layoutCommon.xaxis, title: state.pdpTarget === 'temp' ? 'Pronóstico Base Temp. (°C)' : 'Pronóstico Base Hum. (%)' }}, yaxis: {{ ...layoutCommon.yaxis, title: state.pdpTarget === 'temp' ? 'Impacto Marginal Temp. (°C)' : 'Impacto Marginal Hum. (%)' }} }}, {{ responsive: true }});
+            Plotly.newPlot('pdp-lag-chart', [traceLag], {{ ...layoutCommon, xaxis: {{ ...layoutCommon.xaxis, title: state.pdpTarget === 'temp' ? 'Lag de Error Temp. (°C)' : 'Lag de Error Hum. (%)' }}, yaxis: {{ ...layoutCommon.yaxis, title: state.pdpTarget === 'temp' ? 'Impacto Marginal Temp. (°C)' : 'Impacto Marginal Hum. (%)' }} }}, {{ responsive: true }});
         }}
 
         function drawDiurnalBias() {{
