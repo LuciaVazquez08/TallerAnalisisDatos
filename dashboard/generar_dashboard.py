@@ -10,7 +10,7 @@ import shap
 # Configuración de Rutas
 FEATURE_PATH = "desarrollo_modelo/clima_features.parquet"
 MODEL_PATH = "desarrollo_modelo/bias_correction_model.pkl"
-OUTPUT_PATH = "dashboard/dashboard_sesgo_clima.html"
+OUTPUT_PATH = "dashboard/index.html"
 
 FEATURES = [
     'temp_fcst', 'hum_fcst', 
@@ -270,8 +270,8 @@ def generate_dashboard():
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Plotly.js Local -->
-    <script src="plotly.min.js"></script>
+    <!-- Plotly.js CDN -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
     
     <style>
         :root {{
@@ -774,7 +774,7 @@ def generate_dashboard():
                 </li>
                 <li>
                     <button class="nav-link" data-tab="monitoring" id="nav-monitoring" onclick="changeTab('monitoring')">
-                        🕒 <span>Monitoreo & Incert.</span>
+                        🕒 <span>Monitoreo</span>
                     </button>
                 </li>
                 <li>
@@ -787,7 +787,7 @@ def generate_dashboard():
         
         <div class="sidebar-footer">
             <p><strong>Taller de Análisis 1</strong></p>
-            <p>Trabajo Práctico 2</p>
+            <p>Grupo 2</p>
             <p class="mt-1" style="font-size:0.7rem; opacity:0.8;">Modelo: XGBoost Regressor</p>
         </div>
     </div>
