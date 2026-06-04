@@ -444,6 +444,11 @@ def generate_dashboard():
             padding: 24px;
             position: relative;
             transition: var(--transition);
+            min-width: 0;
+        }}
+
+        .card-span-2 {{
+            grid-column: span 2;
         }}
         
         .card-interactive:hover {{
@@ -623,6 +628,36 @@ def generate_dashboard():
             gap: 24px;
         }}
 
+        .tab-panel-monitoring > div {{
+            min-width: 0;
+        }}
+
+        .overview-map-grid {{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }}
+
+        .overview-map-grid > div {{
+            min-width: 0;
+        }}
+
+        .explainability-grid {{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }}
+
+        .explainability-grid > div {{
+            min-width: 0;
+        }}
+
+        .filter-item-right {{
+            margin-left: auto;
+        }}
+
         .charts-column {{
             display: flex;
             flex-direction: column;
@@ -634,6 +669,9 @@ def generate_dashboard():
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 16px;
+        }}
+        .pdp-grid > div {{
+            min-width: 0;
         }}
         .pdp-item-full {{
             grid-column: span 2;
@@ -754,6 +792,73 @@ def generate_dashboard():
             .tab-panel-monitoring {{
                 grid-template-columns: 1fr;
             }}
+            .overview-map-grid {{
+                grid-template-columns: 1fr;
+            }}
+            .explainability-grid {{
+                grid-template-columns: 1fr;
+            }}
+        }}
+
+        @media (max-width: 768px) {{
+            .dashboard-grid {{
+                grid-template-columns: 1fr;
+            }}
+            .card-span-2 {{
+                grid-column: span 1;
+            }}
+            header {{
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }}
+            .filter-bar {{
+                flex-direction: column;
+                align-items: stretch;
+                gap: 16px;
+            }}
+            .filter-item {{
+                width: 100%;
+            }}
+            .select-station {{
+                width: 100%;
+            }}
+            .filter-item-right {{
+                margin-left: 0;
+            }}
+        }}
+
+        @media (max-width: 576px) {{
+            .main-content {{
+                padding: 16px;
+                margin-left: 60px;
+            }}
+            .sidebar {{
+                width: 60px;
+                padding: 12px 4px;
+            }}
+            .sidebar-brand {{
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }}
+            .nav-link {{
+                padding: 10px;
+            }}
+            .card {{
+                padding: 16px;
+            }}
+            .dashboard-grid {{
+                gap: 16px;
+            }}
+            .tab-panel-monitoring {{
+                gap: 16px;
+            }}
+            .overview-map-grid {{
+                gap: 16px;
+            }}
+            .explainability-grid {{
+                gap: 16px;
+            }}
         }}
     </style>
 </head>
@@ -835,7 +940,7 @@ def generate_dashboard():
                     </div>
                 </div>
                 
-                <div class="card" style="grid-column: span 2;">
+                <div class="card card-span-2">
                     <div style="display:flex; flex-direction:column; justify-content:space-between; height:100%;">
                         <div>
                             <h4 style="font-size:0.95rem; font-weight:600; margin-bottom:8px; color:var(--accent);">Resumen Ejecutivo</h4>
@@ -852,7 +957,7 @@ def generate_dashboard():
             </div>
             
             <!-- Fila de Mapa e Info -->
-            <div style="display:grid; grid-template-columns: 2fr 1fr; gap:24px; margin-bottom:32px;">
+            <div class="overview-map-grid">
                 <div class="card" style="padding:16px;">
                     <h3 style="font-size:1rem; font-weight:600; margin-bottom:12px; padding-left:8px;">
                         Distribución Espacial de la Mejora (MAE)
@@ -907,7 +1012,7 @@ def generate_dashboard():
                         </div>
                     </div>
                     
-                    <div class="filter-item" style="margin-left:auto;">
+                    <div class="filter-item filter-item-right">
                         <div class="switch-container" id="uncertainty-switch" onclick="toggleUncertainty()">
                             <div class="switch-box"></div>
                             <span class="switch-label">Ver Banda de Incertidumbre</span>
@@ -990,7 +1095,7 @@ def generate_dashboard():
                 </div>
             </header>
             
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px; margin-bottom:24px;">
+            <div class="explainability-grid">
                 <!-- Ciclo Diurno del Sesgo -->
                 <div class="card" style="padding:16px;">
                     <h3 style="font-size:0.95rem; font-weight:600; margin-bottom:12px;">
