@@ -1324,6 +1324,7 @@ def generate_dashboard():
             state.selectedStationId = stationId;
             const select = document.getElementById('station-select');
             if (select) select.value = stationId;
+            updateStationData();
             changeTab('monitoring');
         }}
 
