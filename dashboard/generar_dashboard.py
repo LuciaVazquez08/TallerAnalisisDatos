@@ -1510,7 +1510,14 @@ def generate_dashboard():
             const layout = {{
                 geo: {{
                     scope: 'usa',
-                    projection: {{ type: 'albers usa' }},
+                    projection: {{
+                        type: 'albers usa',
+                        scale: 1.8
+                    }},
+                    center: {{
+                        lat: 38.75,
+                        lon: -94.5
+                    }},
                     showland: true,
                     landcolor: 'rgb(250, 250, 250)',
                     subunitcolor: 'rgb(217, 217, 217)',
