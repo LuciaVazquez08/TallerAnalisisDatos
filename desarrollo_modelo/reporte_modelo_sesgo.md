@@ -35,10 +35,11 @@ El modelo fue evaluado en el último 15% de los datos cronológicos (~66,000 reg
 ### 3.2 Análisis de Sesgo Horario
 Como se observa en `eval_bias_hourly_temp.png` y `eval_bias_hourly_hum.png`, el modelo de ML reduce drásticamente el error promedio por hora. La expansión del dataset ha permitido una corrección mucho más precisa de los picos de humedad nocturnos.
 
-### 3.3 Importancia de Variables
-El análisis muestra los predictores más relevantes:
-*   **Temperatura:** El diferencial de pronóstico y los lags siguen siendo críticos, pero la latitud/longitud han ganado peso al usar un dataset más largo que cubre más variabilidad climática.
-*   **Humedad:** La dependencia del ciclo diurno (`hour_sin/cos`) se mantiene como el factor dominante.
+### 3.3 Importancia de Variables (Análisis PFI)
+El análisis de Importancia de Variables por Permutación (PFI) en el conjunto de test de evaluación revela los predictores de los que depende el modelo para aplicar la corrección de sesgo:
+*   **Temperatura:** Excluyendo el pronóstico base (`temp_fcst`), la persistencia del error de la hora anterior (`temp_error_lag1`) es el factor más crítico (aumenta el MAE en ~0.95°C al ser permutado). Le siguen la tendencia del pronóstico (`temp_fcst_diff`, ~0.32°C) y el ciclo diurno (`hour_sin/cos`, ~0.21°C / ~0.11°C). La geografía (latitud/longitud) tiene un impacto marginal en test (<0.03°C).
+*   **Humedad:** Excluyendo el pronóstico base (`hum_fcst`), la persistencia del error anterior (`hum_error_lag1`) es con diferencia el factor dominante (su permutación incrementa el MAE en ~5.16%). Le siguen la tendencia del pronóstico (`hum_fcst_diff`, ~1.37%) y el ciclo diurno (`hour_sin/cos`, ~0.78% / ~0.35%).
+
 
 ## 4. Fase Experimental: Resultados de Optimización
 

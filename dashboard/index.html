@@ -1558,17 +1558,23 @@
             const tempValues = state.impType === 'xgb' ? importances.temp : importances.temp.importances_mean;
             const humValues = state.impType === 'xgb' ? importances.hum : importances.hum.importances_mean;
             
-            // Separar y ordenar para temperatura (descendiente, más importante primero)
-            const sortedTemp = labels.map((l, idx) => ({
-                label: l,
+            // Separar y ordenar para temperatura (excluyendo el pronóstico base temp_fcst)
+            const sortedTemp = DB.features.map((f, idx) => ({
+                id: f,
+                label: FEATURE_LABELS[f] || f,
                 val: tempValues[idx]
-            })).sort((a, b) => b.val - a.val);
+            }))
+            .filter(item => item.id !== 'temp_fcst')
+            .sort((a, b) => b.val - a.val);
             
-            // Separar y ordenar para humedad (descendiente, más importante primero)
-            const sortedHum = labels.map((l, idx) => ({
-                label: l,
+            // Separar y ordenar para humedad (excluyendo el pronóstico base hum_fcst)
+            const sortedHum = DB.features.map((f, idx) => ({
+                id: f,
+                label: FEATURE_LABELS[f] || f,
                 val: humValues[idx]
-            })).sort((a, b) => b.val - a.val);
+            }))
+            .filter(item => item.id !== 'hum_fcst')
+            .sort((a, b) => b.val - a.val);
             
             const traceTemp = {
                 y: sortedTemp.map(c => c.label),
