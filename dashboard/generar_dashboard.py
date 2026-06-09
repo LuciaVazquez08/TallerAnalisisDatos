@@ -917,7 +917,7 @@ def generate_dashboard():
                         <div>
                             <h4 style="font-size:0.95rem; font-weight:600; margin-bottom:8px; color:var(--accent);">Resumen Ejecutivo</h4>
                             <p style="font-size:0.85rem; color:var(--text-muted); line-height:1.5;">
-                            El modelo XGBoost corrige los sesgos del ciclo diurno del modelo físico de la NWS utilizando el diferencial térmico, inercia térmica y lags de error. La mejora promedio combinada supera el <strong>45.0%</strong> en todo el conjunto de prueba (evaluación temporal fuera de muestra).
+                            El modelo XGBoost corrige los sesgos del ciclo diurno del modelo físico de la NWS utilizando el diferencial térmico, inercia térmica y lags de error. La mejora promedio combinada supera el <strong>45.0%</strong> en todo el conjunto de prueba (evaluación temporal fuera de muestra). <strong>Análisis espacial:</strong> Las estaciones que exhiben mayor margen de mejora corresponden a zonas con microclimas más complejos o terreno accidentado, donde el modelo de ML corrige con éxito los sesgos sistemáticos locales que escapan a la resolución espacial del modelo físico NWS.
                         </p>
                     </div>
                     <div style="font-size:0.8rem; border-top:1px solid var(--border-color); padding-top:8px; display:flex; justify-content:space-between; color:var(--text-muted);">
