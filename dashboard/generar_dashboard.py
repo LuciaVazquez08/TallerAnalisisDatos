@@ -955,7 +955,6 @@ def generate_dashboard():
                     </div>
                 </div>
             </div>
-            </div>
             
             <!-- Fila de Mapa e Info -->
             <div class="overview-map-grid">
