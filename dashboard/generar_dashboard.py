@@ -1283,7 +1283,7 @@ def generate_dashboard():
         function populateTopStations() {{
             const container = document.getElementById('top-stations-list');
             container.innerHTML = '';
-            const topStations = [...DB.stations].sort((a, b) => b.imp_avg - a.imp_avg).slice(0, 5);
+            const topStations = [...DB.stations].sort((a, b) => b.imp_avg - a.imp_avg).slice(0, 10);
             
             topStations.forEach((st, idx) => {{
                 const card = document.createElement('div');
