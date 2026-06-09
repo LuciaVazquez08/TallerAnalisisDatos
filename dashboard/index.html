@@ -404,22 +404,16 @@
 
         .pdp-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 16px;
         }
         .pdp-grid > div {
             min-width: 0;
         }
-        .pdp-item-full {
-            grid-column: span 2;
-        }
         @media (max-width: 900px) {
             .pdp-grid {
                 grid-template-columns: 1fr;
-            }
-            .pdp-item-full {
-                grid-column: span 1;
             }
         }
 
@@ -944,7 +938,7 @@
                         <h4 style="font-size:0.8rem; font-weight:600; margin-bottom:8px; text-align:center;">Pronóstico Base NWS</h4>
                         <div id="pdp-fcst-chart" style="height:220px; width:100%;"></div>
                     </div>
-                    <div class="pdp-item-full" style="background:#f8fafc; border:1px solid var(--border-color); border-radius:8px; padding:12px;">
+                    <div style="background:#f8fafc; border:1px solid var(--border-color); border-radius:8px; padding:12px;">
                         <h4 style="font-size:0.8rem; font-weight:600; margin-bottom:8px; text-align:center;">Error de Hora Anterior (Lag 1)</h4>
                         <div id="pdp-lag-chart" style="height:220px; width:100%;"></div>
                     </div>
