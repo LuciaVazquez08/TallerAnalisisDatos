@@ -747,100 +747,102 @@
         </div>
         
         <!-- PESTAÑA: MONITOREO Y SERIES TEMPORALES (CON INCERTIDUMBRE) -->
-        <div id="panel-monitoring" class="tab-panel-monitoring" style="display:none;">
+        <div id="panel-monitoring" style="display:none; flex-direction:column; gap:24px;">
             
-            <!-- Columna de Gráficos de Tiempo -->
-            <div class="charts-column">
-                <!-- Barra de Filtros -->
-                <div class="filter-bar">
-                    <div class="filter-item">
-                        <span class="filter-label">Estación Meteorológica</span>
-                        <select id="station-select" class="select-station" onchange="updateStation(this.value)">
-                            <!-- Populated by JS -->
-                        </select>
-                    </div>
-                    
-                    <div class="filter-item">
-                        <span class="filter-label">Rango Temporal</span>
-                        <div class="hour-filter-group">
-                            <button class="hour-filter-btn" id="btn-range-24" onclick="changeTimeRange(24)">24 Hs</button>
-                            <button class="hour-filter-btn active" id="btn-range-48" onclick="changeTimeRange(48)">48 Hs</button>
-                            <button class="hour-filter-btn" id="btn-range-72" onclick="changeTimeRange(72)">72 Hs</button>
-                        </div>
-                    </div>
-                    
-                    <div class="filter-item filter-item-right">
-                        <div class="switch-container" id="uncertainty-switch" onclick="toggleUncertainty()">
-                            <div class="switch-box"></div>
-                            <span class="switch-label">Ver Banda de Incertidumbre</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card" style="padding:16px;">
-                    <h3 style="font-size:0.95rem; font-weight:600; margin-bottom:8px; display:flex; justify-content:space-between;">
-                        <span>Serie Temporal de Temperatura (°C)</span>
-                        <span style="font-size:0.75rem; color:var(--text-muted);">Estación activa: <span style="font-weight:700;" class="lbl-active-station-id"></span></span>
-                    </h3>
-                    <div id="temp-ts-chart" class="chart-box"></div>
+            <!-- Barra de Filtros (Ancho completo) -->
+            <div class="filter-bar" style="margin-bottom:0;">
+                <div class="filter-item">
+                    <span class="filter-label">Estación Meteorológica</span>
+                    <select id="station-select" class="select-station" onchange="updateStation(this.value)">
+                        <!-- Populated by JS -->
+                    </select>
                 </div>
                 
-                <div class="card" style="padding:16px;">
-                    <h3 style="font-size:0.95rem; font-weight:600; margin-bottom:8px; display:flex; justify-content:space-between;">
-                        <span>Serie Temporal de Humedad (%)</span>
-                        <span style="font-size:0.75rem; color:var(--text-muted);">Estación activa: <span style="font-weight:700;" class="lbl-active-station-id"></span></span>
-                    </h3>
-                    <div id="hum-ts-chart" class="chart-box"></div>
+                <div class="filter-item">
+                    <span class="filter-label">Rango Temporal</span>
+                    <div class="hour-filter-group">
+                        <button class="hour-filter-btn" id="btn-range-24" onclick="changeTimeRange(24)">24 Hs</button>
+                        <button class="hour-filter-btn active" id="btn-range-48" onclick="changeTimeRange(48)">48 Hs</button>
+                        <button class="hour-filter-btn" id="btn-range-72" onclick="changeTimeRange(72)">72 Hs</button>
+                    </div>
+                </div>
+                
+                <div class="filter-item filter-item-right">
+                    <div class="switch-container" id="uncertainty-switch" onclick="toggleUncertainty()">
+                        <div class="switch-box"></div>
+                        <span class="switch-label">Ver Banda de Incertidumbre</span>
+                    </div>
                 </div>
             </div>
             
-            <!-- Columna Lateral de Explicabilidad Local (SHAP) -->
-            <div style="display:flex; flex-direction:column; gap:24px;">
-                <div class="card" style="height: 100%; display:flex; flex-direction:column; justify-content:space-between;">
-                    <div>
-                        <h3 style="font-size:0.95rem; font-weight:600; margin-bottom:8px; border-bottom:1px solid var(--border-color); padding-bottom:8px;">
-                            🧠 Explicabilidad Local (SHAP)
+            <!-- Grid de Contenido Principal (Gráficos + SHAP Lateral) -->
+            <div class="tab-panel-monitoring">
+                <!-- Columna de Gráficos de Tiempo -->
+                <div class="charts-column">
+                    <div class="card" style="padding:16px;">
+                        <h3 style="font-size:0.95rem; font-weight:600; margin-bottom:8px; display:flex; justify-content:space-between;">
+                            <span>Serie Temporal de Temperatura (°C)</span>
+                            <span style="font-size:0.75rem; color:var(--text-muted);">Estación activa: <span style="font-weight:700;" class="lbl-active-station-id"></span></span>
                         </h3>
-                        
-                        <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.4; margin-bottom:12px;">
-                            Haz clic en cualquier punto de las series temporales para ver la cascada de contribución local del modelo.
-                        </p>
-                        
-                        <!-- Información del Punto Seleccionado -->
-                        <div style="background:#f8fafc; border:1px solid var(--border-color); border-radius:6px; padding:10px; font-size:0.8rem; margin-bottom:16px;">
-                            <strong>Fecha/Hora:</strong> <span style="font-weight:600; color:var(--accent);" id="lbl-obs-date"></span><br>
-                            <strong>Valor Real:</strong> <span style="font-weight:600;" id="lbl-obs-real"></span><br>
-                            <strong>Corregido (ML):</strong> <span style="font-weight:600; color:#10b981;" id="lbl-obs-ml"></span>
-                        </div>
-                        
-                        <!-- Selector del Objetivo SHAP (Temp o Hum) -->
-                        <div style="display:flex; gap:8px; margin-bottom:16px;">
-                            <button id="btn-shap-temp" class="target-btn active" onclick="changeShapTarget('temp')">Temperatura</button>
-                            <button id="btn-shap-hum" class="target-btn" onclick="changeShapTarget('hum')">Humedad</button>
-                        </div>
-                        
-                        <!-- Waterfall Chart Container -->
-                        <div id="shap-waterfall" style="height:320px;"></div>
+                        <div id="temp-ts-chart" class="chart-box"></div>
                     </div>
                     
-                    <!-- Mini Tabla de Contribución -->
-                    <div>
-                        <h4 style="font-size:0.85rem; font-weight:600; margin-top:12px; margin-bottom:6px;">Variables más influyentes</h4>
-                        <table class="local-expl-table">
-                            <thead>
-                                <tr>
-                                    <th>Variable</th>
-                                    <th>Contribución</th>
-                                </tr>
-                            </thead>
-                            <tbody id="shap-table-body">
-                                <!-- Populated by JS -->
-                            </tbody>
-                        </table>
+                    <div class="card" style="padding:16px;">
+                        <h3 style="font-size:0.95rem; font-weight:600; margin-bottom:8px; display:flex; justify-content:space-between;">
+                            <span>Serie Temporal de Humedad (%)</span>
+                            <span style="font-size:0.75rem; color:var(--text-muted);">Estación activa: <span style="font-weight:700;" class="lbl-active-station-id"></span></span>
+                        </h3>
+                        <div id="hum-ts-chart" class="chart-box"></div>
+                    </div>
+                </div>
+                
+                <!-- Columna Lateral de Explicabilidad Local (SHAP) -->
+                <div style="display:flex; flex-direction:column; gap:24px;">
+                    <div class="card" style="height: 100%; display:flex; flex-direction:column; justify-content:space-between;">
+                        <div>
+                            <h3 style="font-size:0.95rem; font-weight:600; margin-bottom:8px; border-bottom:1px solid var(--border-color); padding-bottom:8px;">
+                                🧠 Explicabilidad Local (SHAP)
+                            </h3>
+                            
+                            <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.4; margin-bottom:12px;">
+                                Haz clic en cualquier punto de las series temporales para ver la cascada de contribución local del modelo.
+                            </p>
+                            
+                            <!-- Información del Punto Seleccionado -->
+                            <div style="background:#f8fafc; border:1px solid var(--border-color); border-radius:6px; padding:10px; font-size:0.8rem; margin-bottom:16px;">
+                                <strong>Fecha/Hora:</strong> <span style="font-weight:600; color:var(--accent);" id="lbl-obs-date"></span><br>
+                                <strong>Valor Real:</strong> <span style="font-weight:600;" id="lbl-obs-real"></span><br>
+                                <strong>Corregido (ML):</strong> <span style="font-weight:600; color:#10b981;" id="lbl-obs-ml"></span>
+                            </div>
+                            
+                            <!-- Selector del Objetivo SHAP (Temp o Hum) -->
+                            <div style="display:flex; gap:8px; margin-bottom:16px;">
+                                <button id="btn-shap-temp" class="target-btn active" onclick="changeShapTarget('temp')">Temperatura</button>
+                                <button id="btn-shap-hum" class="target-btn" onclick="changeShapTarget('hum')">Humedad</button>
+                            </div>
+                            
+                            <!-- Waterfall Chart Container -->
+                            <div id="shap-waterfall" style="height:320px;"></div>
+                        </div>
+                        
+                        <!-- Mini Tabla de Contribución -->
+                        <div>
+                            <h4 style="font-size:0.85rem; font-weight:600; margin-top:12px; margin-bottom:6px;">Variables más influyentes</h4>
+                            <table class="local-expl-table">
+                                <thead>
+                                    <tr>
+                                        <th>Variable</th>
+                                        <th>Contribución</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="shap-table-body">
+                                    <!-- Populated by JS -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-            
         </div>
         
         <!-- PESTAÑA: EXPLICABILIDAD GLOBAL -->
@@ -880,9 +882,9 @@
             <div class="explainability-grid" style="grid-template-columns: 1fr; margin-bottom:32px;">
                 
                 <!-- Importancia de Variables (XGBoost vs PFI) -->
-                <div class="card" style="padding:16px;">
-                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-                        <h3 style="font-size:0.95rem; font-weight:600;">
+                <div class="card" style="padding:24px;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; border-bottom:1px solid var(--border-color); padding-bottom:12px;">
+                        <h3 style="font-size:1.1rem; font-weight:600;">
                             Importancia de Variables (Global)
                         </h3>
                         <div style="display:flex; gap:6px;">
@@ -890,8 +892,27 @@
                             <button id="btn-imp-pfi" class="target-btn active" style="padding:4px 8px;" onclick="changeImpType('pfi')">Permutación (PFI)</button>
                         </div>
                     </div>
-                    <div id="feature-importance-chart" class="chart-box-sm"></div>
-                    <p style="font-size:0.75rem; color:var(--text-muted); line-height:1.4; margin-top:8px;">
+                    
+                    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:24px; line-height:1.5;">
+                        Las gráficas inferiores representan la contribución global de cada variable predictora en los modelos entrenados. La <strong>Importancia Interna de XGBoost</strong> mide la ganancia promedio que cada variable aporta al construir las divisiones de los árboles de decisión. La <strong>Importancia por Permutación (PFI)</strong> evalúa de manera más directa el decremento medio en el error absoluto (MAE) del modelo cuando los valores de la característica se desordenan aleatoriamente.
+                    </p>
+                    
+                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap:24px;">
+                        <div style="background:#f8fafc; border:1px solid var(--border-color); border-radius:8px; padding:16px;">
+                            <h4 style="font-size:0.9rem; font-weight:600; margin-bottom:12px; text-align:center; color:#f43f5e;">
+                                🌡️ Importancia de Variables - Temperatura
+                            </h4>
+                            <div id="feature-importance-temp-chart" style="height:350px; width:100%;"></div>
+                        </div>
+                        <div style="background:#f8fafc; border:1px solid var(--border-color); border-radius:8px; padding:16px;">
+                            <h4 style="font-size:0.9rem; font-weight:600; margin-bottom:12px; text-align:center; color:#3b82f6;">
+                                💧 Importancia de Variables - Humedad Relativa
+                            </h4>
+                            <div id="feature-importance-hum-chart" style="height:350px; width:100%;"></div>
+                        </div>
+                    </div>
+                    
+                    <p style="font-size:0.75rem; color:var(--text-muted); line-height:1.4; margin-top:16px; border-top:1px solid var(--border-color); padding-top:12px;">
                         <span id="importance-desc-text">Muestra el decremento medio en el score del modelo al permutar aleatoriamente cada característica en el set de prueba.</span>
                     </p>
                 </div>
@@ -1000,7 +1021,7 @@
             
             // Mostrar/Ocultar paneles
             document.getElementById('panel-overview').style.display = tabName === 'overview' ? 'block' : 'none';
-            document.getElementById('panel-monitoring').style.display = tabName === 'monitoring' ? 'grid' : 'none';
+            document.getElementById('panel-monitoring').style.display = tabName === 'monitoring' ? 'flex' : 'none';
             document.getElementById('panel-explainability').style.display = tabName === 'explainability' ? 'block' : 'none';
             
             setTimeout(() => {
@@ -1543,16 +1564,21 @@
             const tempValues = state.impType === 'xgb' ? importances.temp : importances.temp.importances_mean;
             const humValues = state.impType === 'xgb' ? importances.hum : importances.hum.importances_mean;
             
-            const combined = labels.map((l, idx) => ({
+            // Separar y ordenar para temperatura (descendiente, más importante primero)
+            const sortedTemp = labels.map((l, idx) => ({
                 label: l,
-                tempVal: tempValues[idx],
-                humVal: humValues[idx],
-                avg: (tempValues[idx] + humValues[idx]) / 2
-            })).sort((a, b) => b.avg - a.avg);
+                val: tempValues[idx]
+            })).sort((a, b) => b.val - a.val);
+            
+            // Separar y ordenar para humedad (descendiente, más importante primero)
+            const sortedHum = labels.map((l, idx) => ({
+                label: l,
+                val: humValues[idx]
+            })).sort((a, b) => b.val - a.val);
             
             const traceTemp = {
-                y: combined.map(c => c.label),
-                x: combined.map(c => c.tempVal),
+                y: sortedTemp.map(c => c.label),
+                x: sortedTemp.map(c => c.val),
                 name: 'Modelo Temp.',
                 type: 'bar',
                 orientation: 'h',
@@ -1560,25 +1586,36 @@
             };
             
             const traceHum = {
-                y: combined.map(c => c.label),
-                x: combined.map(c => c.humVal),
+                y: sortedHum.map(c => c.label),
+                x: sortedHum.map(c => c.val),
                 name: 'Modelo Hum.',
                 type: 'bar',
                 orientation: 'h',
                 marker: { color: '#3b82f6' }
             };
             
-            const layout = {
-                barmode: 'group',
+            const titleX = state.impType === 'xgb' ? 'Ganancia del Árbol (Gain)' : 'Decremento del Score (MAE)';
+            
+            const layoutTemp = {
                 margin: { l: 150, r: 20, t: 10, b: 40 },
-                legend: { orientation: 'h', y: 1.1, x: 0 },
+                showlegend: false,
                 plot_bgcolor: '#ffffff',
                 paper_bgcolor: 'rgba(0,0,0,0)',
                 yaxis: { autorange: 'reverse', tickfont: { size: 9 } },
-                xaxis: { gridcolor: '#f1f5f9', title: state.impType === 'xgb' ? 'Ganancia del Árbol (Gain)' : 'Decremento del Score (MAE °C / %)' }
+                xaxis: { gridcolor: '#f1f5f9', title: titleX + ' (°C)' }
             };
             
-            Plotly.newPlot('feature-importance-chart', [traceTemp, traceHum], layout, { responsive: true });
+            const layoutHum = {
+                margin: { l: 150, r: 20, t: 10, b: 40 },
+                showlegend: false,
+                plot_bgcolor: '#ffffff',
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                yaxis: { autorange: 'reverse', tickfont: { size: 9 } },
+                xaxis: { gridcolor: '#f1f5f9', title: titleX + ' (%)' }
+            };
+            
+            Plotly.newPlot('feature-importance-temp-chart', [traceTemp], layoutTemp, { responsive: true });
+            Plotly.newPlot('feature-importance-hum-chart', [traceHum], layoutHum, { responsive: true });
         }
 
         function drawPDPPlots() {
