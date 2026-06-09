@@ -1424,7 +1424,24 @@ def generate_dashboard():
             const size = DB.stations.map(s => s.mae_nws_temp * 10 + 4);
             const colors = DB.stations.map(s => s.imp_avg);
             
-            const data = [{{
+            // Línea de borde y sombreado para resaltar la región de estudio central
+            const regionBoundaryTrace = {{
+                type: 'scattergeo',
+                lat: [28.5, 49.0, 49.0, 28.5, 28.5],
+                lon: [-106.5, -106.5, -82.5, -82.5, -106.5],
+                mode: 'lines',
+                fill: 'toself',
+                fillcolor: 'rgba(37, 99, 235, 0.05)',
+                line: {{
+                    color: 'rgb(37, 99, 235)',
+                    width: 2,
+                    dash: 'dash'
+                }},
+                name: 'Región de Trabajo (EE.UU. Central)',
+                hoverinfo: 'name'
+            }};
+
+            const stationsTrace = {{
                 type: 'scattergeo',
                 lat: lats,
                 lon: lons,
@@ -1452,7 +1469,9 @@ def generate_dashboard():
                 text: text,
                 customdata: DB.stations.map(s => s.id),
                 hoverinfo: 'text'
-            }}];
+            }};
+            
+            const data = [regionBoundaryTrace, stationsTrace];
             
             const layout = {{
                 geo: {{
