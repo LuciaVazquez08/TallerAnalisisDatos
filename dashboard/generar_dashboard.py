@@ -65,6 +65,10 @@ def generate_dashboard():
         return
 
     df = pd.read_parquet(FEATURE_PATH)
+    
+    # Excluir estación KSLR debido a artefacto en el conjunto de test (corte temporal y cese de reportes)
+    df = df[df['station_id'] != 'KSLR'].copy()
+    
     df = df.sort_values('obs_timestamp')
     
     # Split de Test (último 15%)
