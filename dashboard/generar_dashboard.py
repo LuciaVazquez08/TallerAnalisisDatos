@@ -1114,17 +1114,32 @@ def generate_dashboard():
                 </div>
             </header>
             
-            <div class="explainability-grid">
-                <!-- Ciclo Diurno del Sesgo -->
-                <div class="card" style="padding:16px;">
-                    <h3 style="font-size:0.95rem; font-weight:600; margin-bottom:12px;">
-                        Perfil del Ciclo Diurno del Sesgo (Promedio)
-                    </h3>
-                    <div id="diurnal-bias-chart" class="chart-box-sm"></div>
-                    <p style="font-size:0.75rem; color:var(--text-muted); line-height:1.4; margin-top:8px;">
-                        Este perfil muestra la media del error (Pronóstico - Real) para cada hora del día. El modelo NWS (rojo/azul) tiende a sobreestimar y subestimar la temperatura/humedad en momentos críticos del ciclo térmico. El modelo ML (verde) deforma la curva de sesgo medio cerca de cero.
-                    </p>
+            <!-- Perfil del Ciclo Diurno del Sesgo (Temperatura y Humedad Separados) -->
+            <div class="card" style="padding:24px; margin-bottom:32px;">
+                <h3 style="font-size:1.1rem; font-weight:600; margin-bottom:8px;">
+                    Perfil del Ciclo Diurno del Sesgo Promedio
+                </h3>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:24px; line-height:1.5;">
+                    El perfil muestra la media del error (Pronóstico NWS - Observación Real) para cada hora del día en todas las estaciones. La <strong>línea discontinua gruesa</strong> representa el modelo base de la NWS, mostrando claras subestimaciones y sobreestimaciones en los momentos clave de transición térmica (amanecer y atardecer). La <strong>línea sólida</strong> representa la corrección aplicada por el modelo de ML (XGBoost), la cual aplana la curva de sesgo manteniéndola muy cercana a cero en todo el ciclo diurno.
+                </p>
+                
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap:24px;">
+                    <div style="background:#f8fafc; border:1px solid var(--border-color); border-radius:8px; padding:16px;">
+                        <h4 style="font-size:0.9rem; font-weight:600; margin-bottom:12px; text-align:center; color:#f43f5e;">
+                            🌡️ Perfil de Sesgo en Temperatura
+                        </h4>
+                        <div id="diurnal-temp-bias-chart" style="height:250px; width:100%;"></div>
+                    </div>
+                    <div style="background:#f8fafc; border:1px solid var(--border-color); border-radius:8px; padding:16px;">
+                        <h4 style="font-size:0.9rem; font-weight:600; margin-bottom:12px; text-align:center; color:#3b82f6;">
+                            💧 Perfil de Sesgo en Humedad Relativa
+                        </h4>
+                        <div id="diurnal-hum-bias-chart" style="height:250px; width:100%;"></div>
+                    </div>
                 </div>
+            </div>
+            
+            <div class="explainability-grid" style="grid-template-columns: 1fr; margin-bottom:32px;">
                 
                 <!-- Importancia de Variables (XGBoost vs PFI) -->
                 <div class="card" style="padding:16px;">
@@ -1906,55 +1921,55 @@ def generate_dashboard():
             const traceNwsT = {{
                 x: hours,
                 y: nwsTempBias,
-                name: 'Temp. NWS (Sesgo Base)',
-                line: {{ color: '#f43f5e', dash: 'dot', width: 2 }},
+                name: 'NWS Temp (Sesgo Base)',
+                line: {{ color: 'rgb(244, 63, 94)', dash: 'dash', width: 3.5 }},
                 type: 'scatter'
             }};
             
             const traceMlT = {{
                 x: hours,
                 y: mlTempBias,
-                name: 'Temp. ML (Corregido)',
-                line: {{ color: '#10b981', width: 2.5 }},
+                name: 'ML Temp (Corregido)',
+                line: {{ color: 'rgb(16, 185, 129)', width: 3.0 }},
                 type: 'scatter'
             }};
             
             const traceNwsH = {{
                 x: hours,
                 y: nwsHumBias,
-                name: 'Hum. NWS (Sesgo Base)',
-                line: {{ color: '#3b82f6', dash: 'dot', width: 2 }},
-                type: 'scatter',
-                yaxis: 'y2'
+                name: 'NWS Humedad (Sesgo Base)',
+                line: {{ color: 'rgb(59, 130, 246)', dash: 'dash', width: 3.5 }},
+                type: 'scatter'
             }};
             
             const traceMlH = {{
                 x: hours,
                 y: mlHumBias,
-                name: 'Hum. ML (Corregido)',
-                line: {{ color: '#0d9488', width: 2.5 }},
-                type: 'scatter',
-                yaxis: 'y2'
+                name: 'ML Humedad (Corregido)',
+                line: {{ color: 'rgb(13, 148, 136)', width: 3.0 }},
+                type: 'scatter'
             }};
             
-            const layout = {{
-                margin: {{ l: 45, r: 45, t: 20, b: 35 }},
-                legend: {{ orientation: 'h', y: 1.25, x: 0 }},
+            const layoutTemp = {{
+                margin: {{ l: 50, r: 20, t: 10, b: 35 }},
+                legend: {{ orientation: 'h', y: 1.15, x: 0 }},
                 plot_bgcolor: '#ffffff',
                 paper_bgcolor: 'rgba(0,0,0,0)',
                 xaxis: {{ gridcolor: '#cbd5e1', linecolor: '#475569', title: 'Hora del Día', dtick: 2, tickfont: {{ color: '#0f172a' }} }},
-                yaxis: {{ gridcolor: '#cbd5e1', linecolor: '#475569', title: 'Sesgo Temp (°C)', titlefont: {{ color: '#f43f5e' }}, tickfont: {{ color: '#0f172a' }} }},
-                yaxis2: {{
-                    title: 'Sesgo Humedad (%)',
-                    titlefont: {{ color: '#3b82f6' }},
-                    overlaying: 'y',
-                    side: 'right',
-                    gridcolor: 'transparent',
-                    tickfont: {{ color: '#0f172a' }}
-                }}
+                yaxis: {{ gridcolor: '#cbd5e1', linecolor: '#475569', title: 'Sesgo Promedio Temp (°C)', tickfont: {{ color: '#0f172a' }} }}
             }};
             
-            Plotly.newPlot('diurnal-bias-chart', [traceNwsT, traceMlT, traceNwsH, traceMlH], layout, {{ responsive: true }});
+            const layoutHum = {{
+                margin: {{ l: 50, r: 20, t: 10, b: 35 }},
+                legend: {{ orientation: 'h', y: 1.15, x: 0 }},
+                plot_bgcolor: '#ffffff',
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                xaxis: {{ gridcolor: '#cbd5e1', linecolor: '#475569', title: 'Hora del Día', dtick: 2, tickfont: {{ color: '#0f172a' }} }},
+                yaxis: {{ gridcolor: '#cbd5e1', linecolor: '#475569', title: 'Sesgo Promedio Humedad (%)', tickfont: {{ color: '#0f172a' }} }}
+            }};
+            
+            Plotly.newPlot('diurnal-temp-bias-chart', [traceNwsT, traceMlT], layoutTemp, {{ responsive: true }});
+            Plotly.newPlot('diurnal-hum-bias-chart', [traceNwsH, traceMlH], layoutHum, {{ responsive: true }});
         }}
 
         // Arrancar la App al cargar el DOM
