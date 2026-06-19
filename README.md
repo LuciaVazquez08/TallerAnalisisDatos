@@ -1,260 +1,108 @@
-# Taller de Análisis de Datos 1
-## TP1 — Evaluación y Diagnóstico de Predicciones Meteorológicas
+# Taller de Análisis de Datos 1 — TP Final
+## Corrección de Sesgos en Predicciones Meteorológicas con Machine Learning
 
-# 👥 Equipo
-Damian Piuselli
-Julian Rolando 
-Lucia Vazquez
-Mauro Frias
+Este repositorio contiene la solución completa para el proyecto final del taller. Se ha diseñado, evaluado e implementado un pipeline de datos de extremo a extremo que realiza la ingesta, limpieza, análisis y posterior corrección de sesgos sistemáticos en los pronósticos de temperatura y humedad provistos por la NWS (National Weather Service).
 
-## 📌 Objetivo
-Construir un pipeline reproducible para comparar predicciones meteorológicas con observaciones reales, evaluar el error y diagnosticar el desempeño del modelo.
-
-El pipeline debe:
-* Consumir datos desde APIs meteorológicas
-* Unificar datos de distintas fuentes
-* Limpiar y transformar los datos
-* Generar un dataset final
-* Permitir análisis del error de predicción
-
----
-# 🏗️ Arquitectura del Pipeline
-```
-EventBridge (schedule)
-        ↓
-    Weather API 
-        ↓
-AWS Lambda (ingestión)
-        ↓
-    S3 raw storage
-        ↓
-    Transformación
-        ↓
-Dataset Final (CSV/Parquet)
-```
-
----
-# ☁️ Infraestructura AWS utilizada
-
-* Amazon EventBridge → Corida programada
-* AWS Lambda → extracción de datos
-* Amazon S3 → almacenamiento de datos crudos y procesados
-* IAM Roles → permisos de acceso
-* CloudWatch → ejecución programada
----
-
-# 📂 Estructura del proyecto
-
-```
-weather-pipeline/
-│
-├── lambda/
-│   └── ingest_weather.py
-│
-├── data/
-│   └── estaciones_560.csv
-│
-├── transform/
-│   └── (pendiente)
-│
-├── dataset/
-│   └── (pendiente)
-│
-├── requirements.txt
-└── README.md
-```
+El modelo final basado en **XGBoost** logra corregir el patrón de error asociado al ciclo diurno y reduce el error de predicción en aproximadamente un **45%** para ambas variables físicas.
 
 ---
 
-# 🔄 Pipeline actual
-
-Actualmente implementado:
-
-1. AWS Lambda consume API weather.gov
-2. Obtiene:
-   * estaciones
-   * pronósticos
-   * pronóstico hourly
-   * observaciones actuales
-   * historial
-3. Guarda cada respuesta en S3 como JSON
-4. Archivos versionados con timestamp
----
-
-# 📁 Estructura esperada en S3
-
-```
-datos-clima-prueba/
- ├── raw/
- │    ├── stations/
- │    ├── forecast_periods/
- │    ├── forecast_hourly/
- │    ├── station_current/
- │    └── station_history/
- │
- └── processed/
-      └── dataset_final.parquet
-```
+## 👥 Equipo
+* **Damian Piuselli**
+* **Julian Rolando**
+* **Lucia Vazquez**
+* **Mauro Frias**
 
 ---
-# 📍 Datos de entrada
-* API meteorológica: weather.gov
-* CSV con 560 estaciones meteorológicas
-* Coordenadas y station_id
+
+## 🏗️ Arquitectura del Pipeline y Componentes
+
+El proyecto se divide en las siguientes etapas consecutivas:
+
+1. **Ingesta y Almacenamiento (AWS Cloud)**
+   * **AWS Lambda**: Ubicado en [lambda/](file:///home/damianp/Proyectos/TallerAnalisisDatos/lambda), contiene las funciones (`Recolector datos` y `Clima Lambda`) para extraer pronósticos y observaciones reales de la API de weather.gov para las estaciones meteorológicas.
+   * **AWS Glue**: Scripts de ETL y configuraciones ([Aws_glue/](file:///home/damianp/Proyectos/TallerAnalisisDatos/Aws_glue)) para la transformación inicial de los datos estructurados en Amazon S3 de capa *Bronze* a *Silver*.
+
+2. **Procesamiento Local y Calidad de Datos ([local_cleanup/](file:///home/damianp/Proyectos/TallerAnalisisDatos/local_cleanup))**
+   * **Unificación**: El script [unify_data.py](file:///home/damianp/Proyectos/TallerAnalisisDatos/local_cleanup/unify_data.py) unifica las predicciones horarias con las observaciones reales correspondientes.
+   * **Calidad de Datos**: [data_quality.py](file:///home/damianp/Proyectos/TallerAnalisisDatos/local_cleanup/data_quality.py) limpia, detecta y corrige anomalías, imputa nulos y genera el dataset unificado final `clima_unificado.parquet`.
+   * **Diagnósticos**: Scripts como [diagnose_temp_diff.py](file:///home/damianp/Proyectos/TallerAnalisisDatos/local_cleanup/diagnose_temp_diff.py) y [diagnose_wind.py](file:///home/damianp/Proyectos/TallerAnalisisDatos/local_cleanup/diagnose_wind.py) evalúan discrepancias y comportamientos físicos de las variables.
+
+3. **Análisis del Sesgo Diurno ([propuesta_correccion_sesgo_diurno/](file:///home/damianp/Proyectos/TallerAnalisisDatos/propuesta_correccion_sesgo_diurno))**
+   * Contiene los análisis visuales e hipótesis de investigación sobre los patrones de error horario de temperatura y humedad en el ciclo diurno (ver [propuesta_correcion_t_hr.md](file:///home/damianp/Proyectos/TallerAnalisisDatos/propuesta_correccion_sesgo_diurno/propuesta_correcion_t_hr.md)).
+
+4. **Entrenamiento y Optimización de Modelos ([desarrollo_modelo/](file:///home/damianp/Proyectos/TallerAnalisisDatos/desarrollo_modelo))**
+   * **Ingeniería de Features**: Implementación de lags (persistencia de error de horas previas), tendencias temporales y codificación circular del ciclo diurno (seno/coseno).
+   * **Modelado**: Uso de un regresor multi-salida (`MultiOutputRegressor` con **XGBoost**) para predecir de forma conjunta el error de temperatura y humedad.
+   * **Optimización**: Búsqueda bayesiana de hiperparámetros y optimización de la ventana de *look-back* (entrenamiento móvil) mediante **Optuna**, logrando un óptimo con los últimos 21 días de datos.
+
+5. **Visualización y Reportes ([dashboard/](file:///home/damianp/Proyectos/TallerAnalisisDatos/dashboard))**
+   * Generación automática de un reporte web interactivo ([dashboard/index.html](file:///home/damianp/Proyectos/TallerAnalisisDatos/dashboard/index.html)) utilizando Plotly. Permite inspeccionar métricas globales, sesgos por hora, importancia de variables e impactos geográficos por estación.
+
 ---
 
-# ⚙️ Transformación (pendiente)
+## 📊 Resultados Principales (Set de Evaluación)
 
-Se implementará un proceso que:
+| Métrica / Variable | MAE Pronóstico Original (NWS) | MAE Corregido (ML XGBoost) | Reducción del Error (%) |
+| :--- | :---: | :---: | :---: |
+| **Temperatura (°C)** | 1.3049 | 0.7198 | **44.84%** |
+| **Humedad Relativa (%)** | 7.2023 | 3.8486 | **46.56%** |
 
-* Limpie datos nulos
-* Unifique timestamps
-* Seleccione variables relevantes
-* Compare forecast vs observación real
-* Calcule error de predicción
-* Genere dataset final
+---
 
-Columnas esperadas del dataset final:
+## 📂 Estructura del Repositorio
 
 ```
-timestamp
-station_id
-temperature_real
-temperature_forecast
-error_temperature
-humidity_real
-humidity_forecast
-error_humidity
+TallerAnalisisDatos/
+├── Aws_glue/                # ETL scripts para AWS Glue
+├── dashboard/               # Dashboard interactivo y script generador (index.html)
+├── datos_historicos/        # Scripts y datos históricos recopilados
+├── desarrollo_modelo/       # Entrenamiento, optimización (Optuna) y evaluación de ML
+├── entregables/             # PDF del trabajo final e informes complementarios
+├── lambda/                  # Lambdas en AWS para recolección automatizada
+├── local_cleanup/           # Unificación local, calidad de datos y análisis de error
+├── propuesta_correccion_sesgo_diurno/ # Análisis inicial exploratorio de sesgos diurnos
+├── EDA_Final_Climatico.ipynb  # Jupyter Notebook con el análisis exploratorio final
+├── requirements.txt         # Dependencias globales del proyecto
+├── requirements_local.txt   # Dependencias locales para el modelado y visualización
+└── README.md                # Este archivo
 ```
 
 ---
 
-# 📊 Dataset final
-Formato requerido:
+## 🚀 Guía de Ejecución Rápida
 
-* CSV o Parquet
-* limpio
-* fusionado
-* sin valores inconsistentes
-
-Output esperado:
-
-```
-s3://datos-clima-prueba/processed/dataset_final.parquet
+### 1. Preparación del Entorno
+Instalar todas las dependencias necesarias:
+```bash
+pip install -r requirements_local.txt
 ```
 
----
-
-# 🔁 Reproducibilidad
-
-El pipeline es reproducible porque:
-
-* Código versionado en Git
-* Lambda configurable
-* Dataset generado automáticamente
-* Estructura S3 definida
-* Dependencias documentadas
-
----
-
-# ✅ Checklist de entregables TP
-
-## 1. Código del pipeline
-
-* [x] Lambda de extracción
-* [ ] Transformación
-* [ ] Generación dataset final
-* [x] Código documentado
-* [x] Versionado en Git
-
-## 2. Dataset final
-
-* [ ] Limpio
-* [ ] Fusionado
-* [ ] CSV o Parquet
-* [ ] Guardado en S3
-
-## 3. Informe técnico
-
-* [ ] Descripción pipeline
-* [ ] Calidad de datos
-* [ ] Análisis de error
-* [ ] Diagnóstico del modelo
-
----
-# 📌 Estado actual del proyecto
-
-## Implementado
-* Consumo de API weather.gov
-* Lambda en AWS
-* Guardado en S3
-* Versionado temporal con timestamp
-* CSV con 560 estaciones
-
-## Pendiente
-* Lectura automática del CSV de estaciones
-* Pipeline de transformación
-* Limpieza de datos
-* Unificación forecast vs observaciones
-* Cálculo de error
-* Generación dataset final
-* Automatización completa
-
----
-
-# 🚀 Pasos siguientes
-1. Leer CSV de 560 estaciones
-2. Ejecutar Lambda por cada estación
-3. Guardar datos raw en S3
-4. Crear script de transformación
-5. Fusionar datasets
-6. Calcular errores
-7. Generar dataset final
-8. Guardar dataset en S3 processed/
-
----
-
-# 🔗 Cómo conectar con AWS
-## Requisitos
-
-* AWS CLI configurado
-* bucket S3 creado
-* IAM Role con permisos S3
-* Lambda desplegado
-
-## Variables necesarias
-```
-BUCKET=datos-clima-prueba
-REGION=us-east-1
+### 2. Procesar y Unificar Datos
+Para limpiar, imputar nulos y unir pronósticos y observaciones:
+```bash
+python local_cleanup/unify_data.py
+python local_cleanup/data_quality.py
 ```
 
-## Permisos IAM requeridos
-* s3:PutObject
-* s3:GetObject
-* s3:ListBucket
-
----
-# ▶️ Ejecución del pipeline
-
-El pipeline se ejecuta desde AWS Lambda.
-Opciones:
-
-* manual desde consola AWS
-* programado con CloudWatch
-* invocado desde script
-
----
-
-# 📦 Dependencias
-```
-boto3
-requests
-pandas (para transformación futura)
-pyarrow (para parquet)
+### 3. Entrenar y Evaluar el Modelo
+Para optimizar, entrenar y evaluar el corrector de sesgo:
+```bash
+python desarrollo_modelo/train_bias_model.py
+python desarrollo_modelo/evaluate_model.py
 ```
 
+### 4. Generar y Visualizar el Dashboard
+Para crear el dashboard web estático actualizado:
+```bash
+python dashboard/generar_dashboard.py
+```
+A continuación, abrir en el navegador el archivo generado:
+* [dashboard/index.html](file:///home/damianp/Proyectos/TallerAnalisisDatos/dashboard/index.html)
+
 ---
 
-# 📝 Notas
-
-La transformación y generación del dataset final serán implementadas en la siguiente etapa del proyecto.
+## 📝 Documentación Relevante
+* **Informe Técnico de ML**: [reporte_modelo_sesgo.md](file:///home/damianp/Proyectos/TallerAnalisisDatos/desarrollo_modelo/reporte_modelo_sesgo.md)
+* **Propuesta y Sustento Físico**: [propuesta_correcion_t_hr.md](file:///home/damianp/Proyectos/TallerAnalisisDatos/propuesta_correccion_sesgo_diurno/propuesta_correcion_t_hr.md)
+* **Entregables Finales**: El informe final en formato paper PDF se encuentra en [entregables/](file:///home/damianp/Proyectos/TallerAnalisisDatos/entregables).
